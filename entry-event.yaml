@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-entry-event
+  labels:
+    resourceName: opolo-entry-event
+    resourceType: datasource
+spec:
+  #serviceName: "opolo-entry-event"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-entry-event-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-entry-event-pod
+        resourceName: opolo-entry-event
+        resourceType: opolo
+    spec:
+      nodeSelector:
+        deployOpoloEntryEvent: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: opolo-entry-event
+        image: knowesis/opolo-entry-event:V2.0.0-TELSTRA-DEV
+        resources:
+          requests:
+            cpu: 200m
+            memory: 3072Mi
+          limits:
+            cpu: 200m
+            memory: 3072Mi
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3006
+        envFrom:
+          - configMapRef:
+              name: opolo-entry-event-cm

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-register
+  labels:
+    resourceName: opolo-register
+    resourceType: opolo
+  annotations:
+    iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-register-pod
+  template:
+    metadata:
+      labels:
+        app: opolo-register-pod
+        resourceName: register
+        resourceType: opolo
+    spec:
+      nodeSelector:
+        deployOpoloRegister: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: opolo-real
+        image: knowesis/opolo-register:V2.0.0-TELSTRA-DEV
+        resources:
+          requests:
+            cpu: 100m
+            memory: 1024Mi
+          limits:
+            cpu: 200m
+            memory: 3072Mi
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3005
+        envFrom:
+          - configMapRef:
+              name: opolo-register-cm
