@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siftportal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portal-master-pod
+  template:
+    metadata:
+      labels:
+        ResourceType: portal
+        ResourceName: portal
+        ResourceGroup: infra-components
+        app: portal-master-pod
+    spec:
+      nodeSelector:
+        deployPortal: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: siftportal
+        image: knowesis/sift-portal:portal-telstra-v1.0.1
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 512Mi
+          limits:
+            cpu: 300m
+            memory: 4096Mi
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        envFrom:
+          - configMapRef:
+              name: portal-portal-cm

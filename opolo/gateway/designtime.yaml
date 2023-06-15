@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-designtime
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+       app: gateway-designtime-pod
+  template:
+    metadata:
+      labels:
+        app: gateway-designtime-pod
+    spec:
+      nodeSelector:
+        deployGatewayDesigntime: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: gateway-designtime
+        image: knowesis/opolo-gw:telestramigration5
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 512Mi
+          limits:
+            cpu: 200m
+#            memory: 1024Mi
+        ports:
+        - containerPort: 10040
+        envFrom:
+          - configMapRef:
+              name: gateway-designtime-cm
+
+

@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: sift-persist
+spec:
+  serviceName: "sift-persist"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-persist-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-persist-pod
+    spec:
+            #nodeSelector:
+            #role: apps
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: sift-persist
+        image: couchbase:community-7.1.1
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 200m
+            memory: 2048Mi
+          limits:
+            cpu: 2000m
+            memory: 4048Mi
+        env:
+          - name: TYPE
+            value: "MASTER"
+        ports:
+        - containerPort: 8091
+        - containerPort: 4369
+        - containerPort: 8092
+        - containerPort: 8093
+        - containerPort: 11207
+        - containerPort: 11210
+        - containerPort: 11211
+
+        volumeMounts:
+        - mountPath: /opt/couchbase/var/
+          name: persist-data
+      volumes:
+      - name: persist-data
+        hostPath:
+          path: /opt/knowesis/sift/data/persist
+          type: Directory
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sift-persist
+  labels:
+    app: sift-persist
+spec:
+  ports:
+    - port: 8091
+      targetPort: 8091
+      name: couchbase-web
+      nodePort: 30007
+    - port: 4369
+      targetPort: 4369
+      name: couchbase
+    - port: 8092
+      targetPort: 8092
+      name: couchbase-query
+      nodePort: 31681
+    - port: 8093
+      targetPort: 8093
+      name: couchbase-fts
+    - port: 11207
+      targetPort: 11207
+      name: couchbase-data
+    - port: 11210
+      targetPort: 11210
+      name: couchbase-index
+    - port: 11211
+      targetPort: 11211
+      name: couchbase-query-http
+  selector:
+    app: sift-persist-pod
+  type: NodePort

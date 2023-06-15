@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: siftapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: siftapi-master-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: siftapi-master-pod
+    spec:
+      nodeSelector:
+        deploySiftapi: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: siftapi
+        image: knowesis/sift-portal:persistence-api-telstra-v1.0.4
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 512Mi
+          limits:
+            cpu: 300m
+            memory: 4096Mi
+        ports:
+        - containerPort: 10080
+        envFrom:
+          - configMapRef:
+              name: portal-siftapi-cm
+        volumeMounts:
+        - mountPath: /opt/knowesis/sift/orchestrator/sift-api-exec/versions/0.4.2/conf/opolo_couchbase_cluster_np.pem
+          subPath: opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+      volumes:
+      - name: couchbase-pem-volume
+        configMap:
+          name: couchbase-pem

@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+20kind: StatefulSet
+metadata:
+  name: <<ds-name>>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-<<ds-name>>
+  serviceName: sift-datasource-<<ds-name>>
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-<<ds-name>>
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: <<DS_NAME>>
+        - name: PERSIST_ADDRESS
+          value: sift-persist
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: <<DS_NAME>>
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        -  name: KAFKA_HOST_URL
+          value: b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092,b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092
+	-  name: KAFKA_TOPIC
+          value: sift.manage.in
+	-  name: IS_KAFKA_CONNECT_AVAILABLE
+          value: "true"
+	-  name: KAFKA_CONNECT_URL
+          value: http://siftconnect1:8083/connectors
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: PERSIST_PASSWORD
+          value: password
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-<<ds-name>>
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+      imagePullSecrets:
+      - name: sift-cred
+      #nodeSelector:
+        #deployDatasource: 'true'

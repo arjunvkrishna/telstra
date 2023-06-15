@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+
+kind: RoleBinding
+metadata:
+  name: siftmanage
+  namespace: opolo
+subjects:
+- kind: ServiceAccount
+  name: sift-manage # "name" is case sensitive
+  apiGroup: ""
+roleRef:
+  # "roleRef" specifies the binding to a Role / ClusterRole
+  kind: Role #this must be Role or ClusterRole
+  name: siftmanage # this must match the name of the Role or ClusterRole you wish to bind to
+  apiGroup: ""
+

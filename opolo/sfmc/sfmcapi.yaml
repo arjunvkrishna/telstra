@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sfmcapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sfmcapi-master-pod
+  template:
+    metadata:
+      labels:
+        app: sfmcapi-master-pod
+    spec:
+      nodeSelector:
+        deploySfmcapi: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: sfmcapi
+        image: sandeeps96/siftapi:telstra-v1.0.2
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 200Mi
+          limits:
+            cpu: 200m
+            memory: 2048Mi
+        ports:
+        - containerPort: 8090
+        envFrom:
+          - configMapRef:
+              name: sfmc-sfmcapi-cm
+        volumeMounts:
+        - mountPath: /opt/knowesis/opolo/siftAPI/conf/application.properties
+          subPath: application.properties
+          name: configmap-volume
+      volumes:
+      - name: configmap-volume
+        configMap:
+          name: sfmcapi-configmap

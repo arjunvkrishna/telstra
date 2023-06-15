@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgresql
+  labels:
+    app: postgres-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: postgres-pod
+    spec:
+      hostname: postgresql
+      containers:
+        - image: postgres:latest
+          name: postgresql
+          env:
+            - name: POSTGRES_USER
+              value: opoloportaluser
+            - name: POSTGRES_DB
+              value: rtuEybxYChjmVYb
+            - name: POSTGRES_PASSWORD
+              value: SX6NZrD7qFwrxfRn
+          ports:
+            - containerPort: 5432
+              name: postgresql

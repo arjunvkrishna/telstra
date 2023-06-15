@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-admin-pod
+  template:
+    metadata:
+      labels:
+        app: opolo-admin-pod
+    spec:
+      volumes:
+      - name: opolo-admin-opolo-media
+        hostPath:
+          path: /opt/knowesis/data/nginx/opolo-media/upload-images
+          type: Directory
+      nodeSelector:
+        deployOpoloAdmin: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: opolo-admin
+        image: knowesis/opolo-admin:V2.0.0-TELSTRA-DEV
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 500m
+            memory: 3024Mi
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - mountPath: /opolo-admin/upload-images
+          name: opolo-admin-opolo-media
+        envFrom:
+          - configMapRef:
+              name: opolo-admin-cm

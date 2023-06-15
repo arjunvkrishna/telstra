@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: DATA_SOURCE_FILE_TELSTRA
+    resourceType: datasource
+  name: data-source-file-telstra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-data-source-file-telstra
+  serviceName: sift-datasource-data-source-file-telstra
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-data-source-file-telstra
+        resourceName: DATA_SOURCE_FILE_TELSTRA
+        resourceType: datasource
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: PERSIST_ADDRESS
+          value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: SLEEPTIME
+          value: '1'
+        - name: PERSIST_SSL
+          value: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem 
+        - name: PERSIST_USERNAME
+          value: opolonp          
+        - name: PERSIST_PASSWORD
+          value: 0polodef23
+        - name: CONFIG_BUCKET
+          value: opolo_config_np
+        - name: DEFAULT_BUCKET
+          value: opolo_default_np
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-data-source-file-telstra
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+        volumeMounts:
+        - mountPath: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+          subPath: opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+      volumes:
+      - name: couchbase-pem-volume
+        configMap:
+          name: couchbase-pem    
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'

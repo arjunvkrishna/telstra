@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-policy
+  labels:
+    resourceName: opolo-policy
+    resourceType: opolo
+spec:
+  #serviceName: "opolo-policy"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-policy-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-policy-pod
+        resourceName: policy
+        resourceType: opolo
+    spec:
+      nodeSelector:
+        deployOpoloPolicy: "true"
+      imagePullSecrets:
+      - name: sift-cred
+      containers:
+      - name: opolo-policy
+        image: knowesis/opolo-policy:V2.0.0-TELSTRA-DEV
+        resources:
+          requests:
+            cpu: 200m
+            memory: 3072Mi
+          limits:
+            cpu: 200m
+            memory: 3072Mi
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3004
+        envFrom:
+          - configMapRef:
+              name: opolo-policy-cm

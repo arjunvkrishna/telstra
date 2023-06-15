@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: sift-manage
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+         app: sift-manage-pod
+   template:
+      metadata:
+         annotations:
+            iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+         labels:
+            app: sift-manage-pod
+      spec:
+         nodeSelector:
+           deploySiftmanage: "true"
+         imagePullSecrets:
+          - name: sift-cred
+         serviceAccountName: sift-manage
+         volumes:
+         - name: couchbase-pem-volume
+           configMap:
+             name: couchbase-pem
+         #- name: secrets-store-inline
+         #  csi:
+         #     driver: secrets-store.csi.k8s.io
+         #     readOnly: true
+         #     volumeAttributes:
+         #       secretProviderClass: "opolo-sift-aws-secrets"
+         containers:
+         - name: sift-manage
+
+           #siftmange with latest persist library with support for couch v7
+           image: knowesis/siftmanage:V6.0.2-beta-dev
+           #Stable version
+           #image: knowesis/siftmanage:V6.0.1-beta-dev
+           #resources:
+           #    requests:
+           #       cpu: 100m
+           #       memory: 128M
+           #    limits:
+           #       cpu: 100m
+           #       memory: 150M
+           imagePullPolicy: Always
+           volumeMounts:
+            - name: couchbase-pem-volume
+              mountPath:  /opt/knowesis/sift/siftmanage/opolo_couchbase_cluster_np.pem
+              subPath: opolo_couchbase_cluster_np.pem
+           # - name: secrets-store-inline
+           #   readOnly: true
+           #   mountPath: "/tmp/secrets-store"
+           env:
+            -  name: SIFT_INSTALL_PATH
+               value: /opt/knowesis/sift/yml
+            -  name: JVM_PARAM
+               value: "-Xmx300m -Xms300m"
+            -  name: NAMESPACE
+               value: opolo
+            -  name: SIFT_WEBSERVICE_URL
+               value: http://172.18.88.204:31515/v1/api
+            -  name: KAFKA_HOST_URL
+               value: b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092,b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092
+            -  name: KAFKA_TOPIC
+               value: sift.manage.in
+            -  name: IS_KAFKA_CONNECT_AVAILABLE
+               value: "true"
+            -  name: KAFKA_CONNECT_URL
+               value: http://siftconnect1:8083/connectors
+            -  name: PERSIST_TYPE
+               value: couchbasev7
+            -  name: PERSIST_ADDRESS
+               value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+            -  name: PERSIST_USERNAME
+               value: opolonp
+            -  name: PERSIST_BUCKET
+               value: opolo_config_np
+            -  name: PERSIST_PASSWORD
+               value: 0polodef23
+            - name: PERSIST_SSL_CERTIFICATE_PATH
+              value: /opt/knowesis/sift/siftmanage/opolo_couchbase_cluster_np.pem 
+            - name: MAIN_CLASS
+              value: SiftManageAPI
+            - name: LOG_LEVEL
+              value: debug
+            - name: ROOT_LOG_LEVEL
+              value: info
+            - name: LOAD_CONFIG_BUCKET
+              value: "false"
+            - name: ENVIRONMENT
+              value: telstra
+            - name: CONFIG_PATH
+              value: /opt/knowesis/sift/config/
+            - name: LOG_TYPE
+              value: console
+            - name: OVERWRITE_YML_FILES
+              value: "false"
+            - name: SIFT_MANGE_PORT
+              value: "8042"
+           ports:
+            -  containerPort: 8042

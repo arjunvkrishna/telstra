@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: gateway
+    resourceType: runtime
+  name: gateway-runtime
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-runtime-pod
+  template:
+    metadata:
+      labels:
+        app: gateway-runtime-pod
+        resourceName: gateway
+        resourceType: runtime
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: gateway-runtime-cm
+        image: knowesis/opolo-gw-run:telstramigration4
+        imagePullPolicy: Always
+        name: gateway-runtime
+        ports:
+        - containerPort: 10060
+        resources:
+          requests:
+            cpu: 100m
+            memory: 512Mi
+          limits:
+            cpu: 500m
+            memory: 4087Mi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployGatewayRunTime: 'true'

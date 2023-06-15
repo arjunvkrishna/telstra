@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: opolo-register
+  labels:
+    app: opolo-register-pod
+spec:
+  ports:
+    - name: http
+    - port: 3005
+  selector:
+    app: opolo-register-pod
+  type: ClusterIP

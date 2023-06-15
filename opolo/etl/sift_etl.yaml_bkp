@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceType: core
+    resourceName: core
+  name: sift-etl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-etl-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+        #linkerd.io/inject: enabled
+      labels:
+        app: sift-etl-pod
+        resourceType: core
+        resourceName: core
+    spec:
+      containers:
+      - name: sift-etl
+        image: sandeeps96/sift-core:V4.5.0-sift-etl-TelstraResilience
+        imagePullPolicy: Always
+        env:
+        - name: DS_NAME
+          value: sift-etl
+        - name: PERSIST_ADDRESS
+          value: sift-persist
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 1500m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://sift-es:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: siftEtllogs
+        - name: CONTAINER_ID
+          value: siftETL
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: pandastats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: PERSIST_PASSWORD
+          value: password
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        - name: NAMESPACE
+          value: opolo
+        - name: SIFT_ETL_PATH
+          value: /opt/knowesis/sift/core/sift/scripts/ETLExtract/input/
+        - name: SPLITTER_KEY
+          value: MSISDN
+        resources:
+          limits:
+            cpu: '2'
+            memory: 2G
+          requests:
+            cpu: 100m
+            memory: 1G
+        #volumeMounts:
+        #- mountPath: /opt/knowesis/sift/core/sift/scripts/ETLEXTRACT/input/
+        #  name: etl-input-data
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployETL: 'true'
+      #volumes:
+      #- name: etl-input-data
+      #  hostPath:
+      #    path: /opt/knowesis/sift/data/core/sift/scripts/ETLEXTRACT/input/
+      #    type: Directory

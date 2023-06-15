@@ -1,0 +1,2588 @@
+starting siftmanage
+Starting sift manage...
+2023-06-14 11:24:04.117 main Connecting to kafka
+2023-06-14 11:24:04.149 main ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092, b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = SIFT_MANAGE_CIENT
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = SIFT_MANAGE
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 2147483647
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 60000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-06-14 11:24:04.242 main Kafka version: 3.3.2
+2023-06-14 11:24:04.243 main Kafka commitId: b66af662e61082cb
+2023-06-14 11:24:04.243 main Kafka startTimeMs: 1686741844240
+2023-06-14 11:24:04.245 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Subscribed to topic(s): sift.manage.in
+2023-06-14 11:24:04.523 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Resetting the last seen epoch of partition sift.manage.in-0 to 3 since the associated topicId changed from null to UaXx-ObYT66RHcWBKiYi7Q
+2023-06-14 11:24:04.526 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Cluster ID: UAP21MjlQTSkIoYkpuKEBg
+2023-06-14 11:24:04.530 main Subscribed to topic: sift.manage.in
+2023-06-14 11:24:04.530 main Connected to kafka
+Persist Address: sift-persist
+Bucket: config
+2023-06-14 11:24:05.274 cb-events [com.couchbase.core][DnsSrvLookupFailedEvent][113ms] DNS SRV lookup failed (name not found). This is expected if the there is no DNS SRV record associated with the hostname in the connection string. Will now try to bootstrap directly from the given hostname. To suppress this message, specify an IP address instead of a hostname (for example: 127.0.0.1 instead of localhost), specify more than one hostname, or set the `io.enableDnsSrv` client setting to false.
+2023-06-14 11:24:05.771 cb-events [com.couchbase.core][CoreCreatedEvent] {"clientVersion":"3.4.2","clientGitHash":"${buildNumber}","coreVersion":"2.4.2","coreGitHash":"${buildNumber}","userAgent":"couchbase-java/3.4.2 (Linux 6.2.8-1.el7.elrepo.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_332-b09)","maxNumRequestsInRetry":32768,"ioEnvironment":{"nativeIoEnabled":true,"eventLoopThreadCount":2,"eventLoopGroups":["EpollEventLoopGroup"]},"ioConfig":{"captureTraffic":[],"mutationTokensEnabled":true,"networkResolution":"auto","dnsSrvEnabled":true,"tcpKeepAlivesEnabled":true,"tcpKeepAliveTimeMs":60000,"configPollIntervalMs":2500,"kvCircuitBreakerConfig":"disabled","queryCircuitBreakerConfig":"disabled","viewCircuitBreakerConfig":"disabled","searchCircuitBreakerConfig":"disabled","analyticsCircuitBreakerConfig":"disabled","managerCircuitBreakerConfig":"disabled","eventingCircuitBreakerConfig":"disabled","backupCircuitBreakerConfig":"disabled","numKvConnections":1,"maxHttpConnections":12,"idleHttpConnectionTimeoutMs":4500,"configIdleRedialTimeoutMs":300000,"memcachedHashingStrategy":"StandardMemcachedHashingStrategy"},"compressionConfig":{"enabled":true,"minRatio":0.83,"minSize":32},"securityConfig":{"tlsEnabled":false,"nativeTlsEnabled":true,"hostnameVerificationEnabled":true,"trustCertificates":null,"trustManagerFactory":null,"ciphers":[]},"timeoutConfig":{"kvMs":2500,"kvDurableMs":10000,"kvScanMs":75000,"managementMs":75000,"queryMs":75000,"viewMs":75000,"searchMs":75000,"analyticsMs":75000,"connectMs":10000,"disconnectMs":10000,"eventingMs":75000,"backupMs":75000},"loggerConfig":{"customLogger":null,"fallbackToConsole":false,"consoleLogLevel":{"name":"INFO","resourceBundleName":"sun.util.logging.resources.logging","localizedName":"INFO"},"consoleLoggerFormatter":"DefaultLoggerFormatter","disableSlf4j":false,"loggerName":"CouchbaseLogger","diagnosticContextEnabled":false},"orphanReporterConfig":{"emitIntervalMs":10000,"sampleSize":10,"queueLength":1024,"enabled":true},"thresholdLoggingTracerConfig":{"enabled":true,"emitIntervalMs":10000,"sampleSize":10,"queueLength":1024,"kvThresholdMs":500,"queryThresholdMs":1000,"searchThresholdMs":1000,"analyticsThresholdMs":1000,"viewThresholdMs":1000,"transactionsThresholdMs":5000},"loggingMeterConfig":{"enabled":true,"emitIntervalMs":600000},"retryStrategy":"BestEffortRetryStrategy","requestTracer":"ThresholdLoggingTracer","meter":"LoggingMeter","numRequestCallbacks":0,"scheduler":"ParallelScheduler","schedulerThreadCount":1,"transactionsConfig":{"durabilityLevel":"MAJORITY","timeoutMs":15000,"cleanupConfig":{"runLostAttemptsCleanupThread":true,"runRegularAttemptsCleanupThread":true,"cleanupWindowMs":60000,"cleanupSet":""},"numAtrs":1024,"metadataCollection":"none","scanConsistency":"none"}} {"connectionString":"sift-persist","coreId":"0xffdcfb5100000001","numCoreInstances":1,"seedNodes":[{"address":"sift-persist"}]}
+2023-06-14 11:24:05.772 cb-events [com.couchbase.transactions][TransactionsStartedEvent] Transactions successfully initialised, regular cleanup enabled=true, lost cleanup enabled=true
+2023-06-14 11:24:05.778 cb-events [com.couchbase.node][NodeCreatedEvent] Node created {"coreId":"0xffdcfb5100000001","managerPort":"8091","remote":"sift-persist"}
+2023-06-14 11:24:05.778 cb-events [com.couchbase.core][DnsSrvLookupFailedEvent][4849us] DNS SRV lookup failed (name not found). This is expected if the there is no DNS SRV record associated with the hostname in the connection string. Will now try to bootstrap directly from the given hostname. To suppress this message, specify an IP address instead of a hostname (for example: 127.0.0.1 instead of localhost), specify more than one hostname, or set the `io.enableDnsSrv` client setting to false.
+2023-06-14 11:24:05.778 cb-events [com.couchbase.core][TooManyInstancesDetectedEvent] The number of connected Cluster instances (2) exceeds the configured limit (1). It is recommended to create only one instance and reuse it across the application lifetime. Also, make sure to disconnect Clusters if they are not used anymore.
+2023-06-14 11:24:05.779 cb-events [com.couchbase.core][CoreCreatedEvent] {"clientVersion":"3.4.2","clientGitHash":"${buildNumber}","coreVersion":"2.4.2","coreGitHash":"${buildNumber}","userAgent":"couchbase-java/3.4.2 (Linux 6.2.8-1.el7.elrepo.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_332-b09)","maxNumRequestsInRetry":32768,"ioEnvironment":{"nativeIoEnabled":true,"eventLoopThreadCount":2,"eventLoopGroups":["EpollEventLoopGroup"]},"ioConfig":{"captureTraffic":[],"mutationTokensEnabled":true,"networkResolution":"auto","dnsSrvEnabled":true,"tcpKeepAlivesEnabled":true,"tcpKeepAliveTimeMs":60000,"configPollIntervalMs":2500,"kvCircuitBreakerConfig":"disabled","queryCircuitBreakerConfig":"disabled","viewCircuitBreakerConfig":"disabled","searchCircuitBreakerConfig":"disabled","analyticsCircuitBreakerConfig":"disabled","managerCircuitBreakerConfig":"disabled","eventingCircuitBreakerConfig":"disabled","backupCircuitBreakerConfig":"disabled","numKvConnections":1,"maxHttpConnections":12,"idleHttpConnectionTimeoutMs":4500,"configIdleRedialTimeoutMs":300000,"memcachedHashingStrategy":"StandardMemcachedHashingStrategy"},"compressionConfig":{"enabled":true,"minRatio":0.83,"minSize":32},"securityConfig":{"tlsEnabled":false,"nativeTlsEnabled":true,"hostnameVerificationEnabled":true,"trustCertificates":null,"trustManagerFactory":null,"ciphers":[]},"timeoutConfig":{"kvMs":2500,"kvDurableMs":10000,"kvScanMs":75000,"managementMs":75000,"queryMs":75000,"viewMs":75000,"searchMs":75000,"analyticsMs":75000,"connectMs":10000,"disconnectMs":10000,"eventingMs":75000,"backupMs":75000},"loggerConfig":{"customLogger":null,"fallbackToConsole":false,"consoleLogLevel":{"name":"INFO","resourceBundleName":"sun.util.logging.resources.logging","localizedName":"INFO"},"consoleLoggerFormatter":"DefaultLoggerFormatter","disableSlf4j":false,"loggerName":"CouchbaseLogger","diagnosticContextEnabled":false},"orphanReporterConfig":{"emitIntervalMs":10000,"sampleSize":10,"queueLength":1024,"enabled":true},"thresholdLoggingTracerConfig":{"enabled":true,"emitIntervalMs":10000,"sampleSize":10,"queueLength":1024,"kvThresholdMs":500,"queryThresholdMs":1000,"searchThresholdMs":1000,"analyticsThresholdMs":1000,"viewThresholdMs":1000,"transactionsThresholdMs":5000},"loggingMeterConfig":{"enabled":true,"emitIntervalMs":600000},"retryStrategy":"BestEffortRetryStrategy","requestTracer":"ThresholdLoggingTracer","meter":"LoggingMeter","numRequestCallbacks":0,"scheduler":"ParallelScheduler","schedulerThreadCount":1,"transactionsConfig":{"durabilityLevel":"MAJORITY","timeoutMs":15000,"cleanupConfig":{"runLostAttemptsCleanupThread":true,"runRegularAttemptsCleanupThread":true,"cleanupWindowMs":60000,"cleanupSet":""},"numAtrs":1024,"metadataCollection":"none","scanConsistency":"none"}} {"connectionString":"sift-persist","coreId":"0xffdcfb5100000002","numCoreInstances":2,"seedNodes":[{"address":"sift-persist"}]}
+2023-06-14 11:24:05.780 cb-events [com.couchbase.transactions][TransactionsStartedEvent] Transactions successfully initialised, regular cleanup enabled=true, lost cleanup enabled=true
+2023-06-14 11:24:05.780 cb-events [com.couchbase.node][NodeCreatedEvent] Node created {"coreId":"0xffdcfb5100000002","managerPort":"8091","remote":"sift-persist"}
+2023-06-14 11:24:05.981 cb-events [com.couchbase.core][BucketOpenedEvent][224ms] Opened bucket "config" {"coreId":"0xffdcfb5100000002"}
+2023-06-14 11:24:05.981 cb-events [com.couchbase.core][BucketOpenedEvent][249ms] Opened bucket "config" {"coreId":"0xffdcfb5100000001"}
+************************************* Initialised CouchClient ********** com.couchbase.client.java.AsyncCollection@1ab6718
+2023-06-14 11:24:06.080 main Loading yml files to persist  from : /opt/knowesis/sift/yml/telstra , overwrite : false
+2023-06-14 11:24:06.086 main walking through /opt/knowesis/sift/yml/telstra/ datasource
+2023-06-14 11:24:06.086 main walking through files /opt/knowesis/sift/yml/telstra/ datasource/ds-template.yaml
+2023-06-14 11:24:06.088 main Reading file : /opt/knowesis/sift/yml/telstra/ datasource/ds-template.yaml
+2023-06-14 11:24:06.132 main Loading classes from jar /opt/knowesis/sift/siftmanage/lib/client-java-api-12.0.1.jar
+2023-06-14 11:24:06.967 main setting yaml file for job ds-template job type  datasource 
+2023-06-14 11:24:06.975 main apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: ds-template
+    resourceType: ' datasource'
+  name: <<ds-name>>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-<<ds-name>>
+  serviceName: sift-datasource-<<ds-name>>
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-<<ds-name>>
+        resourceName: ds-template
+        resourceType: ' datasource'
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: <<DS_NAME>>
+        - name: PERSIST_ADDRESS
+          value: sift-persist
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: <<DS_NAME>>
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: PERSIST_PASSWORD
+          value: password
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-<<ds-name>>
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'
+
+2023-06-14 11:24:06.981 main Yaml  datasource_ds-template.yml already exists. Skipping update
+2023-06-14 11:24:06.981 main walking through /opt/knowesis/sift/yml/telstra/gateway
+2023-06-14 11:24:06.982 main walking through files /opt/knowesis/sift/yml/telstra/gateway/designtime-cfg.properties
+2023-06-14 11:24:06.983 main walking through files /opt/knowesis/sift/yml/telstra/gateway/designtime-svc.yaml
+2023-06-14 11:24:06.983 main Reading file : /opt/knowesis/sift/yml/telstra/gateway/designtime-svc.yaml
+2023-06-14 11:24:06.995 main setting yaml file for job designtime-svc job type gateway 
+2023-06-14 11:24:06.998 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: gateway-designtime-pod
+    resourceName: designtime-svc
+    resourceType: gateway
+  name: gateway-designtime
+spec:
+  type: NodePort
+  ports:
+  - port: 10040
+  selector:
+    app: gateway-designtime-pod
+
+2023-06-14 11:24:06.999 main Yaml gateway_designtime-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.000 main walking through files /opt/knowesis/sift/yml/telstra/gateway/designtime.yaml
+2023-06-14 11:24:07.000 main Reading file : /opt/knowesis/sift/yml/telstra/gateway/designtime.yaml
+2023-06-14 11:24:07.015 main setting yaml file for job designtime job type gateway 
+2023-06-14 11:24:07.019 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: designtime
+    resourceType: gateway
+  name: gateway-designtime
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-designtime-pod
+  template:
+    metadata:
+      labels:
+        app: gateway-designtime-pod
+        resourceName: designtime
+        resourceType: gateway
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: gateway-designtime-cm
+        image: knowesis/opolo-gw:telstra.2.13.0
+        imagePullPolicy: Always
+        name: gateway-designtime
+        ports:
+        - containerPort: 10040
+        resources:
+          limits:
+            cpu: 200m
+            memory: 3024Mi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployGatewayDesigntime: 'true'
+
+2023-06-14 11:24:07.021 main Yaml gateway_designtime.yml already exists. Skipping update
+2023-06-14 11:24:07.021 main walking through files /opt/knowesis/sift/yml/telstra/gateway/runtime-cfg.properties
+2023-06-14 11:24:07.022 main walking through files /opt/knowesis/sift/yml/telstra/gateway/runtime-svc.yaml
+2023-06-14 11:24:07.022 main Reading file : /opt/knowesis/sift/yml/telstra/gateway/runtime-svc.yaml
+2023-06-14 11:24:07.025 main setting yaml file for job runtime-svc job type gateway 
+2023-06-14 11:24:07.027 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: gateway-runtime-pod
+    resourceName: runtime-svc
+    resourceType: gateway
+  name: gateway-runtime
+spec:
+  type: ClusterIP
+  ports:
+  - port: 10060
+  selector:
+    app: gateway-runtime-pod
+
+2023-06-14 11:24:07.028 main Yaml gateway_runtime-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.029 main walking through files /opt/knowesis/sift/yml/telstra/gateway/runtime.yaml
+2023-06-14 11:24:07.029 main Reading file : /opt/knowesis/sift/yml/telstra/gateway/runtime.yaml
+2023-06-14 11:24:07.036 main setting yaml file for job runtime job type gateway 
+2023-06-14 11:24:07.040 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: runtime
+    resourceType: gateway
+  name: gateway-runtime
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway-runtime-pod
+  template:
+    metadata:
+      labels:
+        app: gateway-runtime-pod
+        resourceName: runtime
+        resourceType: gateway
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: gateway-runtime-cm
+        image: knowesis/opolo-gw-run:telstra.5.5.1
+        imagePullPolicy: Always
+        name: gateway-runtime
+        ports:
+        - containerPort: 10060
+        resources:
+          limits:
+            cpu: 200m
+            memory: 4024Mi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployGatewayRunTime: 'true'
+
+2023-06-14 11:24:07.041 main Yaml gateway_runtime.yml already exists. Skipping update
+2023-06-14 11:24:07.041 main walking through /opt/knowesis/sift/yml/telstra/opolo
+2023-06-14 11:24:07.042 main walking through files /opt/knowesis/sift/yml/telstra/opolo/admin-cfg.properties
+2023-06-14 11:24:07.043 main walking through files /opt/knowesis/sift/yml/telstra/opolo/admin-svc.yaml
+2023-06-14 11:24:07.043 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/admin-svc.yaml
+2023-06-14 11:24:07.047 main setting yaml file for job admin-svc job type opolo 
+2023-06-14 11:24:07.048 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: opolo-admin-pod
+    resourceName: admin-svc
+    resourceType: opolo
+  name: opolo-admin
+spec:
+  type: NodePort
+  ports:
+  - port: 3000
+  selector:
+    app: opolo-admin-pod
+
+2023-06-14 11:24:07.049 main Yaml opolo_admin-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.049 main walking through files /opt/knowesis/sift/yml/telstra/opolo/admin.yaml
+2023-06-14 11:24:07.049 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/admin.yaml
+2023-06-14 11:24:07.062 main setting yaml file for job admin job type opolo 
+2023-06-14 11:24:07.065 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: admin
+    resourceType: opolo
+  name: opolo-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-admin-pod
+  template:
+    metadata:
+      labels:
+        app: opolo-admin-pod
+        resourceName: admin
+        resourceType: opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: opolo-admin-cm
+        image: knowesis/opolo-admin:V6.0.3.2-DEV
+        imagePullPolicy: Always
+        name: opolo-admin
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 500m
+            memory: 3024Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        volumeMounts:
+        - mountPath: /opolo-admin/upload-images
+          name: opolo-admin-opolo-media
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployOpoloAdmin: 'true'
+      volumes:
+      - hostPath:
+          type: Directory
+          path: /opt/knowesis/data/nginx/opolo-media/upload-images
+        name: opolo-admin-opolo-media
+
+2023-06-14 11:24:07.066 main Yaml opolo_admin.yml already exists. Skipping update
+2023-06-14 11:24:07.067 main walking through files /opt/knowesis/sift/yml/telstra/opolo/conf.sh
+2023-06-14 11:24:07.067 main walking through files /opt/knowesis/sift/yml/telstra/opolo/entry-event-svc.yaml
+2023-06-14 11:24:07.067 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/entry-event-svc.yaml
+2023-06-14 11:24:07.069 main setting yaml file for job entry-event-svc job type opolo 
+2023-06-14 11:24:07.070 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: opolo-entry-event-pod
+    resourceName: entry-event-svc
+    resourceType: opolo
+  name: opolo-entry-event
+spec:
+  type: ClusterIP
+  ports:
+  - name: http0
+    port: 3006
+  selector:
+    app: opolo-entry-event-pod
+
+2023-06-14 11:24:07.071 main Yaml opolo_entry-event-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.071 main walking through files /opt/knowesis/sift/yml/telstra/opolo/entry-event.yaml
+2023-06-14 11:24:07.071 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/entry-event.yaml
+2023-06-14 11:24:07.075 main setting yaml file for job entry-event job type opolo 
+2023-06-14 11:24:07.077 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: entry-event
+    resourceType: opolo
+  name: opolo-entry-event
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-entry-event-pod
+  template:
+    metadata:
+      labels:
+        app: opolo-entry-event-pod
+        resourceName: entry-event
+        resourceType: opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: opolo-opolo-service-cm
+        image: knowesis/opolo-entry-event:telstra.1.3
+        imagePullPolicy: Always
+        name: opolo-entry-event
+        resources:
+          limits:
+            cpu: 200m
+            memory: 3Gi
+          requests:
+            cpu: 200m
+            memory: 3Gi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployOpoloEntryEvent: 'true'
+
+2023-06-14 11:24:07.079 main Yaml opolo_entry-event.yml already exists. Skipping update
+2023-06-14 11:24:07.079 main walking through files /opt/knowesis/sift/yml/telstra/opolo/opolo-tel.env
+2023-06-14 11:24:07.079 main walking through files /opt/knowesis/sift/yml/telstra/opolo/policy-svc.yaml
+2023-06-14 11:24:07.079 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/policy-svc.yaml
+2023-06-14 11:24:07.081 main setting yaml file for job policy-svc job type opolo 
+2023-06-14 11:24:07.082 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: opolo-policy-pod
+    resourceName: policy-svc
+    resourceType: opolo
+  name: opolo-policy
+spec:
+  type: ClusterIP
+  ports:
+  - name: http0
+    port: 3004
+  selector:
+    app: opolo-policy-pod
+
+2023-06-14 11:24:07.083 main Yaml opolo_policy-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.083 main walking through files /opt/knowesis/sift/yml/telstra/opolo/policy.yaml
+2023-06-14 11:24:07.083 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/policy.yaml
+2023-06-14 11:24:07.088 main setting yaml file for job policy job type opolo 
+2023-06-14 11:24:07.093 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: policy
+    resourceType: opolo
+  name: opolo-policy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-policy-pod
+  template:
+    metadata:
+      labels:
+        app: opolo-policy-pod
+        resourceName: policy
+        resourceType: opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: opolo-admin-cm
+        image: knowesis/opolo-policy:telstra.1.4
+        imagePullPolicy: Always
+        name: opolo-policy
+        resources:
+          limits:
+            cpu: 200m
+            memory: 3Gi
+          requests:
+            cpu: 200m
+            memory: 3Gi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployOpoloPolicy: 'true'
+
+2023-06-14 11:24:07.094 main Yaml opolo_policy.yml already exists. Skipping update
+2023-06-14 11:24:07.094 main walking through files /opt/knowesis/sift/yml/telstra/opolo/real-cfg.properties
+2023-06-14 11:24:07.095 main walking through files /opt/knowesis/sift/yml/telstra/opolo/real-svc.yaml
+2023-06-14 11:24:07.095 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/real-svc.yaml
+2023-06-14 11:24:07.097 main setting yaml file for job real-svc job type opolo 
+2023-06-14 11:24:07.097 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: opolo-real-pod
+    resourceName: real-svc
+    resourceType: opolo
+  name: opolo-real
+spec:
+  type: ClusterIP
+  ports:
+  - name: http0
+    port: 3013
+  selector:
+    app: opolo-real-pod
+
+2023-06-14 11:24:07.098 main Yaml opolo_real-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.098 main walking through files /opt/knowesis/sift/yml/telstra/opolo/real.yaml
+2023-06-14 11:24:07.099 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/real.yaml
+2023-06-14 11:24:07.103 main setting yaml file for job real job type opolo 
+2023-06-14 11:24:07.105 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: real
+    resourceType: opolo
+  name: opolo-real
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-real-pod
+  template:
+    metadata:
+      labels:
+        app: opolo-real-pod
+        resourceName: real
+        resourceType: opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: opolo-real-cm
+        image: knowesis/opolo-policy:telstra.1.2
+        imagePullPolicy: Always
+        name: opolo-real
+        resources:
+          limits:
+            cpu: 200m
+            memory: 3Gi
+          requests:
+            cpu: 200m
+            memory: 3Gi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployOpoloReal: 'true'
+
+2023-06-14 11:24:07.106 main Yaml opolo_real.yml already exists. Skipping update
+2023-06-14 11:24:07.106 main walking through files /opt/knowesis/sift/yml/telstra/opolo/register-cfg.properties
+2023-06-14 11:24:07.107 main walking through files /opt/knowesis/sift/yml/telstra/opolo/register-svc.yaml
+2023-06-14 11:24:07.107 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/register-svc.yaml
+2023-06-14 11:24:07.110 main setting yaml file for job register-svc job type opolo 
+2023-06-14 11:24:07.111 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: opolo-register-pod
+    resourceName: register-svc
+    resourceType: opolo
+  name: opolo-register
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+  - port: 3005
+  selector:
+    app: opolo-register-pod
+
+2023-06-14 11:24:07.112 main Yaml opolo_register-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.112 main walking through files /opt/knowesis/sift/yml/telstra/opolo/register.yaml
+2023-06-14 11:24:07.112 main Reading file : /opt/knowesis/sift/yml/telstra/opolo/register.yaml
+2023-06-14 11:24:07.117 main setting yaml file for job register job type opolo 
+2023-06-14 11:24:07.119 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: register
+    resourceType: opolo
+  name: opolo-register
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-register
+  template:
+    metadata:
+      labels:
+        app: opolo-register-pod
+        resourceName: register
+        resourceType: opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: opolo-register-cm
+        image: knowesis/opolo-policy:telstra.1.8
+        imagePullPolicy: Always
+        name: opolo-real
+        resources:
+          limits:
+            cpu: 200m
+            memory: 3Gi
+          requests:
+            cpu: 200m
+            memory: 3Gi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployOpoloRegister: 'true'
+
+2023-06-14 11:24:07.120 main Yaml opolo_register.yml already exists. Skipping update
+2023-06-14 11:24:07.120 main walking through /opt/knowesis/sift/yml/telstra/portal
+2023-06-14 11:24:07.120 main walking through files /opt/knowesis/sift/yml/telstra/portal/portal-cfg.properties
+2023-06-14 11:24:07.121 main walking through files /opt/knowesis/sift/yml/telstra/portal/portal-svc.yaml
+2023-06-14 11:24:07.122 main Reading file : /opt/knowesis/sift/yml/telstra/portal/portal-svc.yaml
+2023-06-14 11:24:07.124 main setting yaml file for job portal-svc job type portal 
+2023-06-14 11:24:07.124 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: portal-master-pod
+    resourceName: portal-svc
+    resourceType: portal
+  name: siftportal
+spec:
+  type: ClusterIP
+  ports:
+  - name: web
+    port: 8080
+  selector:
+    app: portal-master-pod
+
+2023-06-14 11:24:07.125 main Yaml portal_portal-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.125 main walking through files /opt/knowesis/sift/yml/telstra/portal/portal.yaml
+2023-06-14 11:24:07.125 main Reading file : /opt/knowesis/sift/yml/telstra/portal/portal.yaml
+2023-06-14 11:24:07.128 main setting yaml file for job portal job type portal 
+2023-06-14 11:24:07.130 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: portal
+    resourceType: portal
+  name: siftportal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portal-master-pod
+  template:
+    metadata:
+      labels:
+        ResourceType: portal
+        ResourceName: portal
+        ResourceGroup: infra-components
+        app: portal-master-pod
+        resourceName: portal
+        resourceType: portal
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: portal-portal-cm
+        image: knowesis/sift-portal:sift-api-6.0.2-FR
+        imagePullPolicy: Always
+        name: siftportal
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: 300m
+            memory: 4Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployPortal: 'true'
+
+2023-06-14 11:24:07.132 main Yaml portal_portal.yml already exists. Skipping update
+2023-06-14 11:24:07.132 main walking through files /opt/knowesis/sift/yml/telstra/portal/siftapi-cfg.properties
+2023-06-14 11:24:07.133 main walking through files /opt/knowesis/sift/yml/telstra/portal/siftapi-svc.yaml
+2023-06-14 11:24:07.133 main Reading file : /opt/knowesis/sift/yml/telstra/portal/siftapi-svc.yaml
+2023-06-14 11:24:07.135 main setting yaml file for job siftapi-svc job type portal 
+2023-06-14 11:24:07.136 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: siftapi-master-pod
+    resourceName: siftapi-svc
+    resourceType: portal
+  name: siftapi
+spec:
+  type: ClusterIP
+  ports:
+  - name: ptapi
+    port: 10080
+  selector:
+    app: siftapi-master-pod
+
+2023-06-14 11:24:07.137 main Yaml portal_siftapi-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.137 main walking through files /opt/knowesis/sift/yml/telstra/portal/siftapi.yaml
+2023-06-14 11:24:07.137 main Reading file : /opt/knowesis/sift/yml/telstra/portal/siftapi.yaml
+2023-06-14 11:24:07.139 main setting yaml file for job siftapi job type portal 
+2023-06-14 11:24:07.141 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: siftapi
+    resourceType: portal
+  name: siftapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: siftapi-master-pod
+  template:
+    metadata:
+      labels:
+        app: siftapi-master-pod
+        resourceName: siftapi
+        resourceType: portal
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: portal-siftapi-cm
+        image: knowesis/sift-siftapi:sift-api-6.0.2-FR
+        imagePullPolicy: Always
+        name: siftapi
+        ports:
+        - containerPort: 10080
+        resources:
+          limits:
+            cpu: 300m
+            memory: 4Gi
+          requests:
+            cpu: 100m
+            memory: 512Mi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySiftapi: 'true'
+
+2023-06-14 11:24:07.142 main Yaml portal_siftapi.yml already exists. Skipping update
+2023-06-14 11:24:07.142 main walking through /opt/knowesis/sift/yml/telstra/sfmc
+2023-06-14 11:24:07.142 main walking through files /opt/knowesis/sift/yml/telstra/sfmc/sfmcapi-cfg.properties
+2023-06-14 11:24:07.143 main walking through files /opt/knowesis/sift/yml/telstra/sfmc/sfmcapi-svc.yaml
+2023-06-14 11:24:07.143 main Reading file : /opt/knowesis/sift/yml/telstra/sfmc/sfmcapi-svc.yaml
+2023-06-14 11:24:07.145 main setting yaml file for job sfmcapi-svc job type sfmc 
+2023-06-14 11:24:07.146 main apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: sfmcapi-master-pod
+    resourceName: sfmcapi-svc
+    resourceType: sfmc
+  name: sfmcapi
+spec:
+  type: ClusterIP
+  ports:
+  - name: sfapi
+    port: 8090
+  selector:
+    app: sfmcapi-master-pod
+
+2023-06-14 11:24:07.147 main Yaml sfmc_sfmcapi-svc.yml already exists. Skipping update
+2023-06-14 11:24:07.147 main walking through files /opt/knowesis/sift/yml/telstra/sfmc/sfmcapi.yaml
+2023-06-14 11:24:07.147 main Reading file : /opt/knowesis/sift/yml/telstra/sfmc/sfmcapi.yaml
+2023-06-14 11:24:07.151 main setting yaml file for job sfmcapi job type sfmc 
+2023-06-14 11:24:07.152 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: sfmcapi
+    resourceType: sfmc
+  name: sfmcapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sfmcapi-master-pod
+  template:
+    metadata:
+      labels:
+        app: sfmcapi-master-pod
+        resourceName: sfmcapi
+        resourceType: sfmc
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: sfmc-sfmcapi-cm
+        image: sandeeps96/siftapi:V6-TESTIMAGE
+        imagePullPolicy: Always
+        name: sfmcapi
+        ports:
+        - containerPort: 8090
+        resources:
+          limits:
+            cpu: 200m
+            memory: 2Gi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySfmcapi: 'true'
+
+2023-06-14 11:24:07.153 main Yaml sfmc_sfmcapi.yml already exists. Skipping update
+2023-06-14 11:24:07.153 main walking through /opt/knowesis/sift/yml/telstra/so-opolo
+2023-06-14 11:24:07.155 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/bu-router-cfg.properties
+2023-06-14 11:24:07.156 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/bu-router.yaml
+2023-06-14 11:24:07.156 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/bu-router.yaml
+2023-06-14 11:24:07.159 main setting yaml file for job bu-router job type so-opolo 
+2023-06-14 11:24:07.161 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: bu-router
+    resourceType: so-opolo
+  name: opolo-bu-router
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-bu-router
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: siftsms
+        ResourceGroup: so
+        resourceName: bu-router
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-bu-router-cm
+        image: knowesis/sift-so:opolo-bu-router-4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-bu-router
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.162 main Yaml so-opolo_bu-router.yml already exists. Skipping update
+2023-06-14 11:24:07.162 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/fulfilmaster-cfg.properties
+2023-06-14 11:24:07.163 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/fulfilmaster.yaml
+2023-06-14 11:24:07.163 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/fulfilmaster.yaml
+2023-06-14 11:24:07.167 main setting yaml file for job fulfilmaster job type so-opolo 
+2023-06-14 11:24:07.169 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: fulfilmaster
+    resourceType: so-opolo
+  name: opolo-fulfilmaster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-siftconfigdump-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-siftconfigdump-pod
+        ResourceGroup: so
+        resourceName: fulfilmaster
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-fulfilmaster-cm
+        image: knowesis/sift-so:so-fulfilmaster-opolo.4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-fulfilmaster
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.170 main Yaml so-opolo_fulfilmaster.yml already exists. Skipping update
+2023-06-14 11:24:07.170 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/interactionhandler-boost_bu-cfg.properties
+2023-06-14 11:24:07.171 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/interactionhandler-boost_bu.yaml
+2023-06-14 11:24:07.171 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/interactionhandler-boost_bu.yaml
+2023-06-14 11:24:07.176 main setting yaml file for job interactionhandler-boost_bu job type so-opolo 
+2023-06-14 11:24:07.177 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: interactionhandler-boost_bu
+    resourceType: so-opolo
+  name: opolo-interactionhandler-boost_bu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-interactionhandler-boost_bu-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-interactionhandler-boost_bu-pod
+        ResourceGroup: so
+        resourceName: interactionhandler-boost_bu
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-interactionhandler-boost_bu-cm
+        image: knowesis/sift-so:so-interactionhandler-opolo.4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-interactionhandler-boost_bu
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.179 main Yaml so-opolo_interactionhandler-boost_bu.yml already exists. Skipping update
+2023-06-14 11:24:07.179 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/interactionhandler-cnsb_bu-cfg.properties
+2023-06-14 11:24:07.179 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/interactionhandler-cnsb_bu.yaml
+2023-06-14 11:24:07.180 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/interactionhandler-cnsb_bu.yaml
+2023-06-14 11:24:07.183 main setting yaml file for job interactionhandler-cnsb_bu job type so-opolo 
+2023-06-14 11:24:07.184 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: interactionhandler-cnsb_bu
+    resourceType: so-opolo
+  name: opolo-interactionhandler-cnsb_bu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-interactionhandler-cnsb_bu-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-interactionhandler-cnsb_bu-pod
+        ResourceGroup: so
+        resourceName: interactionhandler-cnsb_bu
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-interactionhandler-cnsb_bu-cm
+        image: knowesis/sift-so:so-interactionhandler-opolo.4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-interactionhandler-cnsb_bu
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.185 main Yaml so-opolo_interactionhandler-cnsb_bu.yml already exists. Skipping update
+2023-06-14 11:24:07.185 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/mpscloudhandler-cfg.properties
+2023-06-14 11:24:07.186 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/mpscloudhandler.yaml
+2023-06-14 11:24:07.186 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/mpscloudhandler.yaml
+2023-06-14 11:24:07.193 main setting yaml file for job mpscloudhandler job type so-opolo 
+2023-06-14 11:24:07.205 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: mpscloudhandler
+    resourceType: so-opolo
+  name: opolo-mpscloudhandler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-mpscloudhandler
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-mpscloudhandler
+        ResourceGroup: so
+        resourceName: mpscloudhandler
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-mpscloudhandler-cm
+        image: knowesis/sift-so:so-mps-cloud-handler-4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-mpscloudhandler
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.229 main Yaml so-opolo_mpscloudhandler.yml already exists. Skipping update
+2023-06-14 11:24:07.229 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/mpsdiscounthandler-cfg.properties
+2023-06-14 11:24:07.230 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/mpsdiscounthandler.yaml
+2023-06-14 11:24:07.230 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/mpsdiscounthandler.yaml
+2023-06-14 11:24:07.245 main setting yaml file for job mpsdiscounthandler job type so-opolo 
+2023-06-14 11:24:07.251 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: opolo-mpsdiscounthandler
+    resourceName: mpsdiscounthandler
+    resourceType: so-opolo
+  name: opolo-mpsdiscounthandler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-mpsdiscounthandler
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-mpsdiscounthandler
+        ResourceGroup: so
+        resourceName: mpsdiscounthandler
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-mpsdiscounthandler-cm
+        image: knowesis/sift-so:so-mps-discount-handler-4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-mpsdiscounthandler
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.252 main Yaml so-opolo_mpsdiscounthandler.yml already exists. Skipping update
+2023-06-14 11:24:07.253 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/ocshil-fulfilmenthandler-cfg.properties
+2023-06-14 11:24:07.254 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/ocshil-fulfilmenthandler.yaml
+2023-06-14 11:24:07.254 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/ocshil-fulfilmenthandler.yaml
+2023-06-14 11:24:07.261 main setting yaml file for job ocshil-fulfilmenthandler job type so-opolo 
+2023-06-14 11:24:07.263 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: ocshil-fulfilmenthandler
+    resourceType: so-opolo
+  name: opolo-ocshil-fulfilmenthandler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ocshil-fulfilmenthandler-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: ocshil-fulfilmenthandler-pod
+        ResourceGroup: so
+        resourceName: ocshil-fulfilmenthandler
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-ocshil-fulfilmenthandler-cm
+        image: knowesis/sift-so:so-ocsil-fulfilmenthandler-opolo.4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-ocshil-fulfilmenthandler
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.266 main Yaml so-opolo_ocshil-fulfilmenthandler.yml already exists. Skipping update
+2023-06-14 11:24:07.266 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/patternmanager-cfg.properties
+2023-06-14 11:24:07.268 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/patternmanager.yaml
+2023-06-14 11:24:07.268 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/patternmanager.yaml
+2023-06-14 11:24:07.274 main setting yaml file for job patternmanager job type so-opolo 
+2023-06-14 11:24:07.277 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: patternmanager
+    resourceType: so-opolo
+  name: opolo-patternmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-patternmanager-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-patternmanager-pod
+        ResourceGroup: so
+        resourceName: patternmanager
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-patternmanager-cm
+        image: knowesis/sift-so:so-patternmanager-4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-patternmanager
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.279 main Yaml so-opolo_patternmanager.yml already exists. Skipping update
+2023-06-14 11:24:07.280 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/recordkeeper-cfg.properties
+2023-06-14 11:24:07.282 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/recordkeeper.yaml
+2023-06-14 11:24:07.283 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/recordkeeper.yaml
+2023-06-14 11:24:07.289 main setting yaml file for job recordkeeper job type so-opolo 
+2023-06-14 11:24:07.291 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: recordkeeper
+    resourceType: so-opolo
+  name: opolo-recordkeeper
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-recordkeeper
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-recordkeeper-pod
+        ResourceGroup: so
+        resourceName: recordkeeper
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-recordkeeper-cm
+        image: knowesis/sift-so:opolo-recordkeeper-4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-recordkeeper
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.294 main Yaml so-opolo_recordkeeper.yml already exists. Skipping update
+2023-06-14 11:24:07.294 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/siftconfigdump-cfg.properties
+2023-06-14 11:24:07.295 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/siftconfigdump.yaml
+2023-06-14 11:24:07.295 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/siftconfigdump.yaml
+2023-06-14 11:24:07.300 main setting yaml file for job siftconfigdump job type so-opolo 
+2023-06-14 11:24:07.302 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: siftconfigdump
+    resourceType: so-opolo
+  name: opolo-siftconfigdump
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-siftconfigdump-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-siftconfigdump-pod
+        ResourceGroup: so
+        resourceName: siftconfigdump
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-siftconfigdump-cm
+        image: knowesis/sift-so:so-configdumphandler-opolo.4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-siftconfigdump
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.305 main Yaml so-opolo_siftconfigdump.yml already exists. Skipping update
+2023-06-14 11:24:07.305 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/siftsfmcde-cfg.properties
+2023-06-14 11:24:07.310 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/siftsfmcde.yaml
+2023-06-14 11:24:07.310 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/siftsfmcde.yaml
+2023-06-14 11:24:07.314 main setting yaml file for job siftsfmcde job type so-opolo 
+2023-06-14 11:24:07.316 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: siftsfmcde
+    resourceType: so-opolo
+  name: opolo-siftsfmcde
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-siftsfmcde
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-siftsfmcde
+        ResourceGroup: so
+        resourceName: siftsfmcde
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-siftsfmcde-cm
+        image: knowesis/opolo-sfmc-de-handler:telstra.1.1
+        imagePullPolicy: Always
+        name: opolo-siftSfmcDe
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.319 main Yaml so-opolo_siftsfmcde.yml already exists. Skipping update
+2023-06-14 11:24:07.319 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/smshandler-cfg.properties
+2023-06-14 11:24:07.321 main walking through files /opt/knowesis/sift/yml/telstra/so-opolo/smshandler.yaml
+2023-06-14 11:24:07.321 main Reading file : /opt/knowesis/sift/yml/telstra/so-opolo/smshandler.yaml
+2023-06-14 11:24:07.325 main setting yaml file for job smshandler job type so-opolo 
+2023-06-14 11:24:07.327 main apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    resourceName: smshandler
+    resourceType: so-opolo
+  name: opolo-smshandler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-smshandler-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-smshandler-pod
+        ResourceGroup: so
+        resourceName: smshandler
+        resourceType: so-opolo
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: so-opolo-smshandler-cm
+        image: knowesis/sift-so:so-smshandler-opolo.4.0-TELSTRA
+        imagePullPolicy: Always
+        name: opolo-smshandler
+        resources:
+          limits:
+            cpu: '1'
+            memory: 500M
+          requests:
+            cpu: 100m
+            memory: 100M
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: 'true'
+
+2023-06-14 11:24:07.328 main Yaml so-opolo_smshandler.yml already exists. Skipping update
+2023-06-14 11:24:07,901 main INFO Log4j appears to be running in a Servlet environment, but there's no log4j-web module available. If you want better web container support, please add the log4j-web JAR to your web archive or server lib directory.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.0)
+
+2023-06-14 11:24:08.004 main Starting SiftManageAPI using Java 1.8.0_332 on sift-manage-7964d5f8cc-gr49d with PID 7 (/opt/knowesis/sift/siftmanage/siftmanage-1.0.0.jar started by siftuser in /opt/knowesis/sift/siftmanage)
+2023-06-14 11:24:08.007 main Running with Spring Boot v2.5.0, Spring v5.3.7
+2023-06-14 11:24:08.007 main No active profile set, falling back to default profiles: default
+2023-06-14 11:24:08.894 main Tomcat initialized with port(s): 8042 (http)
+2023-06-14 11:24:08.905 main Initializing ProtocolHandler ["http-nio-8042"]
+2023-06-14 11:24:08.905 main Starting service [Tomcat]
+2023-06-14 11:24:08.906 main Starting Servlet engine: [Apache Tomcat/9.0.46]
+2023-06-14 11:24:08.987 main Initializing Spring embedded WebApplicationContext
+2023-06-14 11:24:08.988 main Root WebApplicationContext: initialization completed in 935 ms
+2023-06-14 11:24:09.466 main Starting ProtocolHandler ["http-nio-8042"]
+2023-06-14 11:24:09.480 main Tomcat started on port(s): 8042 (http) with context path ''
+2023-06-14 11:24:09.491 main Started SiftManageAPI in 1.859 seconds (JVM running for 5.907)
+2023-06-14 11:24:09.492 main Application availability state LivenessState changed to CORRECT
+2023-06-14 11:24:09.493 main Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2023-06-14 11:24:09.493 main Running siftmange in namesapce : opolo
+2023-06-14 11:24:09.502 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Discovered group coordinator b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092 (id: 2147483645 rack: null)
+2023-06-14 11:24:09.509 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] (Re-)joining group
+2023-06-14 11:24:09.520 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Request joining group due to: need to re-join with the given member-id: SIFT_MANAGE_CIENT-466f88ba-55cf-4561-8a0b-ad7fa4cfb0e9
+2023-06-14 11:24:09.520 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-06-14 11:24:09.520 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] (Re-)joining group
+2023-06-14 11:24:09.800 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Successfully joined group with generation Generation{generationId=49, memberId='SIFT_MANAGE_CIENT-466f88ba-55cf-4561-8a0b-ad7fa4cfb0e9', protocol='range'}
+2023-06-14 11:24:09.802 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Successfully synced group in generation Generation{generationId=49, memberId='SIFT_MANAGE_CIENT-466f88ba-55cf-4561-8a0b-ad7fa4cfb0e9', protocol='range'}
+2023-06-14 11:24:09.805 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Notifying assignor about the new Assignment(partitions=[sift.manage.in-0])
+2023-06-14 11:24:09.807 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Adding newly assigned partitions: sift.manage.in-0
+2023-06-14 11:24:09.807 main Partitions assigned
+2023-06-14 11:24:09.817 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Setting offset for partition sift.manage.in-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092 (id: 2 rack: apse2-az1)], epoch=3}}
+2023-06-14 11:25:13.899 http-nio-8042-exec-1 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-14 11:25:13.900 http-nio-8042-exec-1 Initializing Servlet 'dispatcherServlet'
+2023-06-14 11:25:13.900 http-nio-8042-exec-1 Completed initialization in 0 ms
+2023-06-14 11:25:13.928 http-nio-8042-exec-1 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:25:27.803 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Request joining group due to: group is already rebalancing
+2023-06-14 11:25:27.807 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Revoke previously assigned partitions sift.manage.in-0
+2023-06-14 11:25:27.808 main Partitions revoked
+2023-06-14 11:25:27.808 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] (Re-)joining group
+2023-06-14 11:25:27.812 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Successfully joined group with generation Generation{generationId=50, memberId='SIFT_MANAGE_CIENT-466f88ba-55cf-4561-8a0b-ad7fa4cfb0e9', protocol='range'}
+2023-06-14 11:25:27.813 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Finished assignment for group at generation 50: {SIFT_MANAGE_CIENT-466f88ba-55cf-4561-8a0b-ad7fa4cfb0e9=Assignment(partitions=[sift.manage.in-0])}
+2023-06-14 11:25:27.816 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Successfully synced group in generation Generation{generationId=50, memberId='SIFT_MANAGE_CIENT-466f88ba-55cf-4561-8a0b-ad7fa4cfb0e9', protocol='range'}
+2023-06-14 11:25:27.817 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Notifying assignor about the new Assignment(partitions=[sift.manage.in-0])
+2023-06-14 11:25:27.817 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Adding newly assigned partitions: sift.manage.in-0
+2023-06-14 11:25:27.817 main Partitions assigned
+2023-06-14 11:25:27.819 main [Consumer clientId=SIFT_MANAGE_CIENT, groupId=SIFT_MANAGE] Setting offset for partition sift.manage.in-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092 (id: 2 rack: apse2-az1)], epoch=3}}
+2023-06-14 11:27:22.873 http-nio-8042-exec-2 Updating yaml file datasource : DATA_SOURCE_FILE_TELSTRA 
+2023-06-14 11:27:22.873 http-nio-8042-exec-2 Yaml file apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: DATA_SOURCE_FILE_TELSTRA
+    resourceType: datasource
+  name: data-source-file-telstra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-data-source-file-telstra
+  serviceName: sift-datasource-data-source-file-telstra
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-data-source-file-telstra
+        resourceName: DATA_SOURCE_FILE_TELSTRA
+        resourceType: datasource
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: PERSIST_ADDRESS
+          value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        -name:: SLEEPTIME
+          value: '1'
+        - name: PERSIST_SSL
+          value: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem 
+        - name: PERSIST_USERNAME
+          value: opolonp          
+        - name: PERSIST_PASSWORD
+          value: 0polodef23
+        - name: CONFIG_BUCKET
+          value: opolo_config_np
+        - name: DEFAULT_BUCKET
+          value: opolo_default_np
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-data-source-file-telstra
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+        volumeMounts:
+        - mountPath: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+          subPath: opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+      volumes:
+      - name: couchbase-pem-volume
+        configMap:
+          name: couchbase-pem    
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'
+ 
+2023-06-14 11:27:22.873 http-nio-8042-exec-2 Yaml file2 apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: DATA_SOURCE_FILE_TELSTRA
+    resourceType: datasource
+  name: data-source-file-telstra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-data-source-file-telstra
+  serviceName: sift-datasource-data-source-file-telstra
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-data-source-file-telstra
+        resourceName: DATA_SOURCE_FILE_TELSTRA
+        resourceType: datasource
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: PERSIST_ADDRESS
+          value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        -name:: SLEEPTIME
+          value: '1'
+        - name: PERSIST_SSL
+          value: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem 
+        - name: PERSIST_USERNAME
+          value: opolonp          
+        - name: PERSIST_PASSWORD
+          value: 0polodef23
+        - name: CONFIG_BUCKET
+          value: opolo_config_np
+        - name: DEFAULT_BUCKET
+          value: opolo_default_np
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-data-source-file-telstra
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+        volumeMounts:
+        - mountPath: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+          subPath: opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+      volumes:
+      - name: couchbase-pem-volume
+        configMap:
+          name: couchbase-pem    
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'
+ 
+2023-06-14 11:27:22.874 http-nio-8042-exec-2 Unable to update yaml file 
+org.yaml.snakeyaml.scanner.ScannerException: mapping values are not allowed here
+ in 'reader', line 48, column 16:
+              value: '1'
+                   ^
+
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchValue(ScannerImpl.java:890) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:379) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:248) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:602) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:165) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:221) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:191) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:313) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:288) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:195) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeSequenceNode(Composer.java:251) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:193) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:313) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:288) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:195) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:313) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:288) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:195) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:313) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:288) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:195) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:313) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:288) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:195) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:115) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.composer.Composer.getSingleNode(Composer.java:146) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:151) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.Yaml.loadFromReader(Yaml.java:490) ~[snakeyaml-1.28.jar:?]
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:442) ~[snakeyaml-1.28.jar:?]
+	at io.kubernetes.client.util.Yaml.load(Yaml.java:82) ~[client-java-12.0.1.jar:?]
+	at io.kubernetes.client.util.Yaml.load(Yaml.java:60) ~[client-java-12.0.1.jar:?]
+	at com.knowesis.sift.siftmanage.api.SiftManageAPI.setYaml(SiftManageAPI.java:924) [siftmanage-1.0.0.jar:?]
+	at com.knowesis.sift.siftmanage.api.SiftManageRestAPI.setyamlFromFile(SiftManageRestAPI.java:180) [siftmanage-1.0.0.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_332]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.7.jar:5.3.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) [tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.7.jar:5.3.7]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.46.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.7.jar:5.3.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.3.7.jar:5.3.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.valves.RemoteIpValve.invoke(RemoteIpValve.java:764) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_332]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_332]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.46.jar:9.0.46]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_332]
+2023-06-14 11:27:22.882 http-nio-8042-exec-2 Fetched siftJobStatus from persist {"docType":"siftManageJobList","jobInfo":[{"jobType":"gateway","jobId":"designtime","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"gateway","jobId":"runtime","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"admin","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"entry-event","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"policy","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"real","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"register","status":"FAILED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"portal","jobId":"portal","status":"NOT_DEPLOYED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"portal","jobId":"siftapi","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"sfmc","jobId":"sfmcapi","status":"NOT_DEPLOYED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"so-opolo","jobId":"bu-router","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"fulfilmaster","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-boost_bu","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-cnsb_bu","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"mpscloudhandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"mpsdiscounthandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"ocshil-fulfilmenthandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"patternmanager","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"recordkeeper","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"siftconfigdump","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"siftsfmcde","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"smshandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-boost-bu","status":"STARTED","lastUpdateTime":"Mon Jun 05 09:50:43 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-cnsb-bu","status":"STARTED","lastUpdateTime":"Mon Jun 05 09:57:21 UTC 2023"},{"jobType":"datasource","jobId":"DATA_SOURCE_FILE_TELSTRA","status":"RUNNING","lastUpdateTime":"Mon Jun 05 10:35:01 UTC 2023"}]}
+2023-06-14 11:27:22.887 http-nio-8042-exec-2 Getting yaml file for job : designtime and job type gateway
+2023-06-14 11:27:22.890 http-nio-8042-exec-2 Getting yaml file for job : runtime and job type gateway
+2023-06-14 11:27:22.892 http-nio-8042-exec-2 Getting yaml file for job : admin and job type opolo
+2023-06-14 11:27:22.895 http-nio-8042-exec-2 Getting yaml file for job : entry-event and job type opolo
+2023-06-14 11:27:22.898 http-nio-8042-exec-2 Getting yaml file for job : policy and job type opolo
+2023-06-14 11:27:22.900 http-nio-8042-exec-2 Getting yaml file for job : real and job type opolo
+2023-06-14 11:27:22.902 http-nio-8042-exec-2 Getting yaml file for job : register and job type opolo
+2023-06-14 11:27:22.905 http-nio-8042-exec-2 Getting yaml file for job : portal and job type portal
+2023-06-14 11:27:22.907 http-nio-8042-exec-2 Getting yaml file for job : siftapi and job type portal
+2023-06-14 11:27:22.911 http-nio-8042-exec-2 Getting yaml file for job : sfmcapi and job type sfmc
+2023-06-14 11:27:22.914 http-nio-8042-exec-2 Getting yaml file for job : bu-router and job type so-opolo
+2023-06-14 11:27:22.916 http-nio-8042-exec-2 Getting yaml file for job : fulfilmaster and job type so-opolo
+2023-06-14 11:27:22.919 http-nio-8042-exec-2 Getting yaml file for job : interactionhandler-boost_bu and job type so-opolo
+2023-06-14 11:27:22.922 http-nio-8042-exec-2 Getting yaml file for job : interactionhandler-cnsb_bu and job type so-opolo
+2023-06-14 11:27:22.924 http-nio-8042-exec-2 Getting yaml file for job : mpscloudhandler and job type so-opolo
+2023-06-14 11:27:22.928 http-nio-8042-exec-2 Getting yaml file for job : mpsdiscounthandler and job type so-opolo
+2023-06-14 11:27:22.931 http-nio-8042-exec-2 Getting yaml file for job : ocshil-fulfilmenthandler and job type so-opolo
+2023-06-14 11:27:22.935 http-nio-8042-exec-2 Getting yaml file for job : patternmanager and job type so-opolo
+2023-06-14 11:27:22.938 http-nio-8042-exec-2 Getting yaml file for job : recordkeeper and job type so-opolo
+2023-06-14 11:27:22.940 http-nio-8042-exec-2 Getting yaml file for job : siftconfigdump and job type so-opolo
+2023-06-14 11:27:22.943 http-nio-8042-exec-2 Getting yaml file for job : siftsfmcde and job type so-opolo
+2023-06-14 11:27:22.947 http-nio-8042-exec-2 Getting yaml file for job : smshandler and job type so-opolo
+2023-06-14 11:27:22.949 http-nio-8042-exec-2 Getting yaml file for job : interactionhandler-boost-bu and job type so-opolo
+2023-06-14 11:27:22.952 http-nio-8042-exec-2 Getting yaml file for job : interactionhandler-cnsb-bu and job type so-opolo
+2023-06-14 11:27:22.955 http-nio-8042-exec-2 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:18.717 http-nio-8042-exec-4 Updating yaml file datasource : DATA_SOURCE_FILE_TELSTRA 
+2023-06-14 11:28:18.717 http-nio-8042-exec-4 Yaml file apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: DATA_SOURCE_FILE_TELSTRA
+    resourceType: datasource
+  name: data-source-file-telstra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-data-source-file-telstra
+  serviceName: sift-datasource-data-source-file-telstra
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-data-source-file-telstra
+        resourceName: DATA_SOURCE_FILE_TELSTRA
+        resourceType: datasource
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: PERSIST_ADDRESS
+          value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: SLEEPTIME
+          value: '1'
+        - name: PERSIST_SSL
+          value: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem 
+        - name: PERSIST_USERNAME
+          value: opolonp          
+        - name: PERSIST_PASSWORD
+          value: 0polodef23
+        - name: CONFIG_BUCKET
+          value: opolo_config_np
+        - name: DEFAULT_BUCKET
+          value: opolo_default_np
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-data-source-file-telstra
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+        volumeMounts:
+        - mountPath: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+          subPath: opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+      volumes:
+      - name: couchbase-pem-volume
+        configMap:
+          name: couchbase-pem    
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'
+ 
+2023-06-14 11:28:18.718 http-nio-8042-exec-4 Yaml file2 apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: DATA_SOURCE_FILE_TELSTRA
+    resourceType: datasource
+  name: data-source-file-telstra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-data-source-file-telstra
+  serviceName: sift-datasource-data-source-file-telstra
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-data-source-file-telstra
+        resourceName: DATA_SOURCE_FILE_TELSTRA
+        resourceType: datasource
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: PERSIST_ADDRESS
+          value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: SLEEPTIME
+          value: '1'
+        - name: PERSIST_SSL
+          value: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem 
+        - name: PERSIST_USERNAME
+          value: opolonp          
+        - name: PERSIST_PASSWORD
+          value: 0polodef23
+        - name: CONFIG_BUCKET
+          value: opolo_config_np
+        - name: DEFAULT_BUCKET
+          value: opolo_default_np
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-data-source-file-telstra
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+        volumeMounts:
+        - mountPath: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+          subPath: opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+      volumes:
+      - name: couchbase-pem-volume
+        configMap:
+          name: couchbase-pem    
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'
+ 
+2023-06-14 11:28:18.725 http-nio-8042-exec-4 setting yaml file for job DATA_SOURCE_FILE_TELSTRA job type datasource 
+2023-06-14 11:28:18.727 http-nio-8042-exec-4 apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: DATA_SOURCE_FILE_TELSTRA
+    resourceType: datasource
+  name: data-source-file-telstra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-data-source-file-telstra
+  serviceName: sift-datasource-data-source-file-telstra
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-data-source-file-telstra
+        resourceName: DATA_SOURCE_FILE_TELSTRA
+        resourceType: datasource
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: PERSIST_ADDRESS
+          value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: SLEEPTIME
+          value: '1'
+        - name: PERSIST_SSL
+          value: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+        - name: PERSIST_USERNAME
+          value: opolonp
+        - name: PERSIST_PASSWORD
+          value: 0polodef23
+        - name: CONFIG_BUCKET
+          value: opolo_config_np
+        - name: DEFAULT_BUCKET
+          value: opolo_default_np
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-data-source-file-telstra
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+        volumeMounts:
+        - mountPath: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+          subPath: opolo_couchbase_cluster_np.pem
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'
+      volumes:
+      - configMap:
+          name: couchbase-pem
+        name: couchbase-pem-volume
+
+2023-06-14 11:28:18.735 http-nio-8042-exec-4 Fetched siftJobStatus from persist {"docType":"siftManageJobList","jobInfo":[{"jobType":"gateway","jobId":"designtime","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"gateway","jobId":"runtime","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"admin","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"entry-event","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"policy","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"real","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"register","status":"FAILED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"portal","jobId":"portal","status":"NOT_DEPLOYED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"portal","jobId":"siftapi","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"sfmc","jobId":"sfmcapi","status":"NOT_DEPLOYED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"so-opolo","jobId":"bu-router","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"fulfilmaster","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-boost_bu","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-cnsb_bu","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"mpscloudhandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"mpsdiscounthandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"ocshil-fulfilmenthandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"patternmanager","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"recordkeeper","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"siftconfigdump","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"siftsfmcde","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"smshandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-boost-bu","status":"STARTED","lastUpdateTime":"Mon Jun 05 09:50:43 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-cnsb-bu","status":"STARTED","lastUpdateTime":"Mon Jun 05 09:57:21 UTC 2023"},{"jobType":"datasource","jobId":"DATA_SOURCE_FILE_TELSTRA","status":"RUNNING","lastUpdateTime":"Mon Jun 05 10:35:01 UTC 2023"}]}
+2023-06-14 11:28:18.736 http-nio-8042-exec-4 Getting yaml file for job : designtime and job type gateway
+2023-06-14 11:28:18.739 http-nio-8042-exec-4 Getting yaml file for job : runtime and job type gateway
+2023-06-14 11:28:18.742 http-nio-8042-exec-4 Getting yaml file for job : admin and job type opolo
+2023-06-14 11:28:18.746 http-nio-8042-exec-4 Getting yaml file for job : entry-event and job type opolo
+2023-06-14 11:28:18.750 http-nio-8042-exec-4 Getting yaml file for job : policy and job type opolo
+2023-06-14 11:28:18.753 http-nio-8042-exec-4 Getting yaml file for job : real and job type opolo
+2023-06-14 11:28:18.756 http-nio-8042-exec-4 Getting yaml file for job : register and job type opolo
+2023-06-14 11:28:18.759 http-nio-8042-exec-4 Getting yaml file for job : portal and job type portal
+2023-06-14 11:28:18.761 http-nio-8042-exec-4 Getting yaml file for job : siftapi and job type portal
+2023-06-14 11:28:18.764 http-nio-8042-exec-4 Getting yaml file for job : sfmcapi and job type sfmc
+2023-06-14 11:28:18.766 http-nio-8042-exec-4 Getting yaml file for job : bu-router and job type so-opolo
+2023-06-14 11:28:18.768 http-nio-8042-exec-4 Getting yaml file for job : fulfilmaster and job type so-opolo
+2023-06-14 11:28:18.771 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-boost_bu and job type so-opolo
+2023-06-14 11:28:18.773 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-cnsb_bu and job type so-opolo
+2023-06-14 11:28:18.776 http-nio-8042-exec-4 Getting yaml file for job : mpscloudhandler and job type so-opolo
+2023-06-14 11:28:18.779 http-nio-8042-exec-4 Getting yaml file for job : mpsdiscounthandler and job type so-opolo
+2023-06-14 11:28:18.782 http-nio-8042-exec-4 Getting yaml file for job : ocshil-fulfilmenthandler and job type so-opolo
+2023-06-14 11:28:18.785 http-nio-8042-exec-4 Getting yaml file for job : patternmanager and job type so-opolo
+2023-06-14 11:28:18.789 http-nio-8042-exec-4 Getting yaml file for job : recordkeeper and job type so-opolo
+2023-06-14 11:28:18.792 http-nio-8042-exec-4 Getting yaml file for job : siftconfigdump and job type so-opolo
+2023-06-14 11:28:18.795 http-nio-8042-exec-4 Getting yaml file for job : siftsfmcde and job type so-opolo
+2023-06-14 11:28:18.797 http-nio-8042-exec-4 Getting yaml file for job : smshandler and job type so-opolo
+2023-06-14 11:28:18.800 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-boost-bu and job type so-opolo
+2023-06-14 11:28:18.802 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-cnsb-bu and job type so-opolo
+2023-06-14 11:28:18.804 http-nio-8042-exec-4 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:18.809 http-nio-8042-exec-4 copied yaml file to persist DATA_SOURCE_FILE_TELSTRA :datasource
+2023-06-14 11:28:18.810 http-nio-8042-exec-4 Fetched siftJobStatus from persist {"docType":"siftManageJobList","jobInfo":[{"jobType":"gateway","jobId":"designtime","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"gateway","jobId":"runtime","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"admin","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"entry-event","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"policy","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"real","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"opolo","jobId":"register","status":"FAILED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"portal","jobId":"portal","status":"NOT_DEPLOYED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"portal","jobId":"siftapi","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"sfmc","jobId":"sfmcapi","status":"NOT_DEPLOYED","lastUpdateTime":"Fri Jun 02 07:53:49 UTC 2023"},{"jobType":"so-opolo","jobId":"bu-router","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"fulfilmaster","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-boost_bu","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-cnsb_bu","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"mpscloudhandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"mpsdiscounthandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"ocshil-fulfilmenthandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"patternmanager","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"recordkeeper","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"siftconfigdump","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"siftsfmcde","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"smshandler","status":"STARTED","lastUpdateTime":"Fri Jun 02 07:53:50 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-boost-bu","status":"STARTED","lastUpdateTime":"Mon Jun 05 09:50:43 UTC 2023"},{"jobType":"so-opolo","jobId":"interactionhandler-cnsb-bu","status":"STARTED","lastUpdateTime":"Mon Jun 05 09:57:21 UTC 2023"},{"jobType":"datasource","jobId":"DATA_SOURCE_FILE_TELSTRA","status":"RUNNING","lastUpdateTime":"Mon Jun 05 10:35:01 UTC 2023"}]}
+2023-06-14 11:28:18.810 http-nio-8042-exec-4 Getting yaml file for job : designtime and job type gateway
+2023-06-14 11:28:18.812 http-nio-8042-exec-4 Getting yaml file for job : runtime and job type gateway
+2023-06-14 11:28:18.814 http-nio-8042-exec-4 Getting yaml file for job : admin and job type opolo
+2023-06-14 11:28:18.817 http-nio-8042-exec-4 Getting yaml file for job : entry-event and job type opolo
+2023-06-14 11:28:18.819 http-nio-8042-exec-4 Getting yaml file for job : policy and job type opolo
+2023-06-14 11:28:18.822 http-nio-8042-exec-4 Getting yaml file for job : real and job type opolo
+2023-06-14 11:28:18.824 http-nio-8042-exec-4 Getting yaml file for job : register and job type opolo
+2023-06-14 11:28:18.827 http-nio-8042-exec-4 Getting yaml file for job : portal and job type portal
+2023-06-14 11:28:18.829 http-nio-8042-exec-4 Getting yaml file for job : siftapi and job type portal
+2023-06-14 11:28:18.832 http-nio-8042-exec-4 Getting yaml file for job : sfmcapi and job type sfmc
+2023-06-14 11:28:18.834 http-nio-8042-exec-4 Getting yaml file for job : bu-router and job type so-opolo
+2023-06-14 11:28:18.836 http-nio-8042-exec-4 Getting yaml file for job : fulfilmaster and job type so-opolo
+2023-06-14 11:28:18.847 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-boost_bu and job type so-opolo
+2023-06-14 11:28:18.850 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-cnsb_bu and job type so-opolo
+2023-06-14 11:28:18.852 http-nio-8042-exec-4 Getting yaml file for job : mpscloudhandler and job type so-opolo
+2023-06-14 11:28:18.855 http-nio-8042-exec-4 Getting yaml file for job : mpsdiscounthandler and job type so-opolo
+2023-06-14 11:28:18.859 http-nio-8042-exec-4 Getting yaml file for job : ocshil-fulfilmenthandler and job type so-opolo
+2023-06-14 11:28:18.862 http-nio-8042-exec-4 Getting yaml file for job : patternmanager and job type so-opolo
+2023-06-14 11:28:18.866 http-nio-8042-exec-4 Getting yaml file for job : recordkeeper and job type so-opolo
+2023-06-14 11:28:18.868 http-nio-8042-exec-4 Getting yaml file for job : siftconfigdump and job type so-opolo
+2023-06-14 11:28:18.870 http-nio-8042-exec-4 Getting yaml file for job : siftsfmcde and job type so-opolo
+2023-06-14 11:28:18.873 http-nio-8042-exec-4 Getting yaml file for job : smshandler and job type so-opolo
+2023-06-14 11:28:18.876 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-boost-bu and job type so-opolo
+2023-06-14 11:28:18.878 http-nio-8042-exec-4 Getting yaml file for job : interactionhandler-cnsb-bu and job type so-opolo
+2023-06-14 11:28:18.881 http-nio-8042-exec-4 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:18.886 http-nio-8042-exec-4 Stopping DATA_SOURCE_FILE_TELSTRA
+2023-06-14 11:28:18.889 http-nio-8042-exec-4 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:18.919 http-nio-8042-exec-4 --> DELETE https://198.19.0.1/apis/apps/v1/namespaces/opolo/statefulsets/data-source-file-telstra?gracePeriodSeconds=10
+2023-06-14 11:28:18.919 http-nio-8042-exec-4 Accept: application/json
+2023-06-14 11:28:18.919 http-nio-8042-exec-4 User-Agent: Kubernetes Java Client/11.0.1-SNAPSHOT
+2023-06-14 11:28:18.919 http-nio-8042-exec-4 Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkV1c0s2R0dpZXM5TlFyOFpSOUdiNzBjWlFfQmtSUDd5TVV3S0NPcEd1QncifQ.eyJhdWQiOlsiaHR0cHM6Ly9hcGkuZ3JlZW4uc2RwYW1wLmludGVybmFsIl0sImV4cCI6MTcxODI3NzgzOCwiaWF0IjoxNjg2NzQxODM4LCJpc3MiOiJodHRwczovL2FwaS5ncmVlbi5zZHBhbXAuaW50ZXJuYWwiLCJrdWJlcm5ldGVzLmlvIjp7Im5hbWVzcGFjZSI6Im9wb2xvIiwicG9kIjp7Im5hbWUiOiJzaWZ0LW1hbmFnZS03OTY0ZDVmOGNjLWdyNDlkIiwidWlkIjoiNWNmZTcyZWQtODliYy00MGZjLTkxZTMtNTQ4YTRjZGU2MjgyIn0sInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJzaWZ0LW1hbmFnZSIsInVpZCI6ImY0MzVlMDVhLWI1NjktNGQ4MS1hNDVmLTdiNmFiNGQ1ZjFjYiJ9LCJ3YXJuYWZ0ZXIiOjE2ODY3NDU0NDV9LCJuYmYiOjE2ODY3NDE4MzgsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpvcG9sbzpzaWZ0LW1hbmFnZSJ9.lP9aaL-mrrcGli0IRoByDamOzJ7OrC0_llpqvtP2cMK88L1D79SZH03TJ_c7_jyxpkFkAtLt-vAk2ZzJdDsXZhtF0_K-e3yvX9lcj8nKL9LPQLWfurM8PwizEfVCzmnETJ85Iv3yv--FnrAvlHYJyyyzhp5jBsHLGDkgU-ohgS320qu35qynssrfqLPWfVsD3RX3DacwJYlt1ougdie2cNrtNkDmlDaVm1oGWm6S6411uecH-5V5IsLI1voPXshoWCG0uQ8ma8POxnYWC5mrLT2BZjcU_33uOy83PDVX4F2vHDWF8a0VYEB92ndx03c7ClU0fWRsbPQcC_Uph63sGw
+2023-06-14 11:28:18.919 http-nio-8042-exec-4 --> END DELETE
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 <-- 200 https://198.19.0.1/apis/apps/v1/namespaces/opolo/statefulsets/data-source-file-telstra?gracePeriodSeconds=10 (264ms)
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 audit-id: 521cb036-3c00-4df0-90f4-1e83a6e78fd0
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 cache-control: no-cache, private
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 content-type: application/json
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 x-kubernetes-pf-flowschema-uid: 13ab64e9-56be-42b6-8c60-1b6c5887dc61
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 x-kubernetes-pf-prioritylevel-uid: f29aebc9-e5c0-4435-a707-264e40c33ff2
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 content-length: 197
+2023-06-14 11:28:19.184 http-nio-8042-exec-4 date: Wed, 14 Jun 2023 11:28:19 GMT
+2023-06-14 11:28:19.185 http-nio-8042-exec-4 
+2023-06-14 11:28:19.185 http-nio-8042-exec-4 {"kind":"Status","apiVersion":"v1","metadata":{},"status":"Success","details":{"name":"data-source-file-telstra","group":"apps","kind":"statefulsets","uid":"39781c7d-a16f-44fb-89a8-fd3b304e515a"}}
+
+2023-06-14 11:28:19.185 http-nio-8042-exec-4 <-- END HTTP (197-byte body)
+2023-06-14 11:28:19.191 http-nio-8042-exec-4 Stopped : data-source-file-telstra
+2023-06-14 11:28:19.191 http-nio-8042-exec-4 Updating the job info . Job Id DATA_SOURCE_FILE_TELSTRA , status : STOPPED
+2023-06-14 11:28:19.193 http-nio-8042-exec-4 Getting config map for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:19.200 http-nio-8042-exec-4 Could not find config file in persist datasource_DATA_SOURCE_FILE_TELSTRA-cfg.properties
+2023-06-14 11:28:19.200 http-nio-8042-exec-4 Could not load config file from persist. Will try to read from file system 
+2023-06-14 11:28:19.200 http-nio-8042-exec-4 Reading file : /opt/knowesis/sift/yml/telstra/datasource/DATA_SOURCE_FILE_TELSTRA-cfg.properties
+2023-06-14 11:28:19.200 http-nio-8042-exec-4 Could not locate config map for DATA_SOURCE_FILE_TELSTRA at this location /opt/knowesis/sift/yml/telstra/datasource/DATA_SOURCE_FILE_TELSTRA-cfg.properties
+2023-06-14 11:28:19.200 http-nio-8042-exec-4 Stopping service for DATA_SOURCE_FILE_TELSTRA : datasource 
+2023-06-14 11:28:19.200 http-nio-8042-exec-4 Getting service yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:19.202 http-nio-8042-exec-4 Could not find yaml file in persist datasource_DATA_SOURCE_FILE_TELSTRA-svc.yml
+2023-06-14 11:28:19.202 http-nio-8042-exec-4 Could not load yaml file from persist. Will try to read from file system 
+2023-06-14 11:28:19.202 http-nio-8042-exec-4 Reading file : /opt/knowesis/sift/yml/telstra/datasource/DATA_SOURCE_FILE_TELSTRA-svc.yml
+2023-06-14 11:28:19.202 http-nio-8042-exec-4 Unknown job DATA_SOURCE_FILE_TELSTRA. Could not find yaml file at this location /opt/knowesis/sift/yml/telstra/datasource/DATA_SOURCE_FILE_TELSTRA-svc.yml
+2023-06-14 11:28:19.202 http-nio-8042-exec-4 No service found for DATA_SOURCE_FILE_TELSTRA : datasource
+2023-06-14 11:28:19.219 http-nio-8042-exec-4 Getting config map for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:19.223 http-nio-8042-exec-4 Could not find config file in persist datasource_DATA_SOURCE_FILE_TELSTRA-cfg.properties
+2023-06-14 11:28:19.223 http-nio-8042-exec-4 Could not load config file from persist. Will try to read from file system 
+2023-06-14 11:28:19.223 http-nio-8042-exec-4 Reading file : /opt/knowesis/sift/yml/telstra/datasource/DATA_SOURCE_FILE_TELSTRA-cfg.properties
+2023-06-14 11:28:19.223 http-nio-8042-exec-4 Could not locate config map for DATA_SOURCE_FILE_TELSTRA at this location /opt/knowesis/sift/yml/telstra/datasource/DATA_SOURCE_FILE_TELSTRA-cfg.properties
+2023-06-14 11:28:19.223 http-nio-8042-exec-4 Getting filebeat config map for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:19.224 http-nio-8042-exec-4 Could not find config file in persist datasource-filebeat.yml
+2023-06-14 11:28:19.224 http-nio-8042-exec-4 Could not load config file from persist. Will try to read from file system 
+2023-06-14 11:28:19.225 http-nio-8042-exec-4 Reading file : /opt/knowesis/sift/yml/telstra/datasource/filebeat.yml
+2023-06-14 11:28:19.225 http-nio-8042-exec-4 Could not locate config map for DATA_SOURCE_FILE_TELSTRA at this location /opt/knowesis/sift/yml/telstra/datasource/filebeat.yml
+2023-06-14 11:28:19.225 http-nio-8042-exec-4 Starting kafka connect adapter for DATA_SOURCE_FILE_TELSTRA
+2023-06-14 11:28:19.227 http-nio-8042-exec-4 Fetched ds config file from persist DATA_SOURCE_FILE_TELSTRA. datasource type : FILE 
+2023-06-14 11:28:19.227 http-nio-8042-exec-4 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:28:19.238 http-nio-8042-exec-4 setting yaml file for job DATA_SOURCE_FILE_TELSTRA job type datasource 
+2023-06-14 11:28:19.239 http-nio-8042-exec-4 apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    resourceName: DATA_SOURCE_FILE_TELSTRA
+    resourceType: datasource
+  name: data-source-file-telstra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sift-datasource-data-source-file-telstra
+  serviceName: sift-datasource-data-source-file-telstra
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: sift-datasource-data-source-file-telstra
+        resourceName: DATA_SOURCE_FILE_TELSTRA
+        resourceType: datasource
+    spec:
+      containers:
+      - env:
+        - name: DS_NAME
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: PERSIST_ADDRESS
+          value: 10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50
+        - name: LOG_LEVEL
+          value: info
+        - name: HEAP_SIZE
+          value: 256m
+        - name: JVM_PARAM
+          value: -XX:+UseConcMarkSweepGC
+        - name: ELASTICSEARCH_URL
+          value: http://elk-aws.uat.th.intranet:9200
+        - name: ELASTICSEARCH_SIFT_LOGS_INDEX
+          value: datasourcelogs
+        - name: CONTAINER_ID
+          value: DATA_SOURCE_FILE_TELSTRA
+        - name: ELASTICSEARCH_SIFT_FILREPORT_INDEX
+          value: siftprocessingstats
+        - name: ELASTICSEARCH_SIFT_BADRECORDS_INDEX
+          value: siftbadrecords
+        - name: PERSIST_CLIENT
+          value: couchbasev7
+        - name: SLEEPTIME
+          value: '1'
+        - name: PERSIST_SSL
+          value: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+        - name: PERSIST_USERNAME
+          value: opolonp
+        - name: PERSIST_PASSWORD
+          value: 0polodef23
+        - name: CONFIG_BUCKET
+          value: opolo_config_np
+        - name: DEFAULT_BUCKET
+          value: opolo_default_np
+        - name: APP_LOG_LEVEL
+          value: INFO
+        - name: LOG_TYPE
+          value: file
+        image: kwdevops/sift-core:V4.5.0-TelstraResilience
+        imagePullPolicy: Always
+        name: sift-datasource-data-source-file-telstra
+        resources:
+          limits:
+            cpu: 400m
+            memory: 1G
+          requests:
+            cpu: 100m
+            memory: 300Mi
+        volumeMounts:
+        - mountPath: /opt/couchbase/ssl/opolo_couchbase_cluster_np.pem
+          name: couchbase-pem-volume
+          subPath: opolo_couchbase_cluster_np.pem
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deployDatasource: 'true'
+      volumes:
+      - configMap:
+          name: couchbase-pem
+        name: couchbase-pem-volume
+
+2023-06-14 11:28:19.244 http-nio-8042-exec-4 Yaml datasource_DATA_SOURCE_FILE_TELSTRA.yml already exists. Skipping update
+2023-06-14 11:28:19.290 http-nio-8042-exec-4 --> POST https://198.19.0.1/apis/apps/v1/namespaces/opolo/statefulsets?pretty=true
+2023-06-14 11:28:19.290 http-nio-8042-exec-4 Content-Type: application/json; charset=utf-8
+2023-06-14 11:28:19.291 http-nio-8042-exec-4 Content-Length: 2231
+2023-06-14 11:28:19.291 http-nio-8042-exec-4 Accept: application/json
+2023-06-14 11:28:19.291 http-nio-8042-exec-4 User-Agent: Kubernetes Java Client/11.0.1-SNAPSHOT
+2023-06-14 11:28:19.292 http-nio-8042-exec-4 Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkV1c0s2R0dpZXM5TlFyOFpSOUdiNzBjWlFfQmtSUDd5TVV3S0NPcEd1QncifQ.eyJhdWQiOlsiaHR0cHM6Ly9hcGkuZ3JlZW4uc2RwYW1wLmludGVybmFsIl0sImV4cCI6MTcxODI3NzgzOCwiaWF0IjoxNjg2NzQxODM4LCJpc3MiOiJodHRwczovL2FwaS5ncmVlbi5zZHBhbXAuaW50ZXJuYWwiLCJrdWJlcm5ldGVzLmlvIjp7Im5hbWVzcGFjZSI6Im9wb2xvIiwicG9kIjp7Im5hbWUiOiJzaWZ0LW1hbmFnZS03OTY0ZDVmOGNjLWdyNDlkIiwidWlkIjoiNWNmZTcyZWQtODliYy00MGZjLTkxZTMtNTQ4YTRjZGU2MjgyIn0sInNlcnZpY2VhY2NvdW50Ijp7Im5hbWUiOiJzaWZ0LW1hbmFnZSIsInVpZCI6ImY0MzVlMDVhLWI1NjktNGQ4MS1hNDVmLTdiNmFiNGQ1ZjFjYiJ9LCJ3YXJuYWZ0ZXIiOjE2ODY3NDU0NDV9LCJuYmYiOjE2ODY3NDE4MzgsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpvcG9sbzpzaWZ0LW1hbmFnZSJ9.lP9aaL-mrrcGli0IRoByDamOzJ7OrC0_llpqvtP2cMK88L1D79SZH03TJ_c7_jyxpkFkAtLt-vAk2ZzJdDsXZhtF0_K-e3yvX9lcj8nKL9LPQLWfurM8PwizEfVCzmnETJ85Iv3yv--FnrAvlHYJyyyzhp5jBsHLGDkgU-ohgS320qu35qynssrfqLPWfVsD3RX3DacwJYlt1ougdie2cNrtNkDmlDaVm1oGWm6S6411uecH-5V5IsLI1voPXshoWCG0uQ8ma8POxnYWC5mrLT2BZjcU_33uOy83PDVX4F2vHDWF8a0VYEB92ndx03c7ClU0fWRsbPQcC_Uph63sGw
+2023-06-14 11:28:19.292 http-nio-8042-exec-4 
+2023-06-14 11:28:19.292 http-nio-8042-exec-4 {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"labels":{"resourceName":"DATA_SOURCE_FILE_TELSTRA","resourceType":"datasource"},"name":"data-source-file-telstra"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"sift-datasource-data-source-file-telstra"}},"serviceName":"sift-datasource-data-source-file-telstra","template":{"metadata":{"annotations":{"iam.amazonaws.com/role":"arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole"},"labels":{"app":"sift-datasource-data-source-file-telstra","resourceName":"DATA_SOURCE_FILE_TELSTRA","resourceType":"datasource"}},"spec":{"containers":[{"env":[{"name":"DS_NAME","value":"DATA_SOURCE_FILE_TELSTRA"},{"name":"PERSIST_ADDRESS","value":"10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50"},{"name":"LOG_LEVEL","value":"info"},{"name":"HEAP_SIZE","value":"256m"},{"name":"JVM_PARAM","value":"-XX:+UseConcMarkSweepGC"},{"name":"ELASTICSEARCH_URL","value":"http://elk-aws.uat.th.intranet:9200"},{"name":"ELASTICSEARCH_SIFT_LOGS_INDEX","value":"datasourcelogs"},{"name":"CONTAINER_ID","value":"DATA_SOURCE_FILE_TELSTRA"},{"name":"ELASTICSEARCH_SIFT_FILREPORT_INDEX","value":"siftprocessingstats"},{"name":"ELASTICSEARCH_SIFT_BADRECORDS_INDEX","value":"siftbadrecords"},{"name":"PERSIST_CLIENT","value":"couchbasev7"},{"name":"SLEEPTIME","value":"1"},{"name":"PERSIST_SSL","value":"/opt/couchbase/ssl/opolo_couchbase_cluster_np.pem"},{"name":"PERSIST_USERNAME","value":"opolonp"},{"name":"PERSIST_PASSWORD","value":"0polodef23"},{"name":"CONFIG_BUCKET","value":"opolo_config_np"},{"name":"DEFAULT_BUCKET","value":"opolo_default_np"},{"name":"APP_LOG_LEVEL","value":"INFO"},{"name":"LOG_TYPE","value":"file"}],"image":"kwdevops/sift-core:V4.5.0-TelstraResilience","imagePullPolicy":"Always","name":"sift-datasource-data-source-file-telstra","resources":{"limits":{"cpu":"400m","memory":"1G"},"requests":{"cpu":"100m","memory":"300Mi"}},"volumeMounts":[{"mountPath":"/opt/couchbase/ssl/opolo_couchbase_cluster_np.pem","name":"couchbase-pem-volume","subPath":"opolo_couchbase_cluster_np.pem"}]}],"imagePullSecrets":[{"name":"sift-cred"}],"nodeSelector":{"deployDatasource":"true"},"volumes":[{"configMap":{"name":"couchbase-pem"},"name":"couchbase-pem-volume"}]}}}}
+2023-06-14 11:28:19.292 http-nio-8042-exec-4 --> END POST (2231-byte body)
+2023-06-14 11:28:19.308 http-nio-8042-exec-4 <-- 201 https://198.19.0.1/apis/apps/v1/namespaces/opolo/statefulsets?pretty=true (16ms)
+2023-06-14 11:28:19.309 http-nio-8042-exec-4 audit-id: ee6c8ec8-fe79-4102-89d2-02db04c5eb8f
+2023-06-14 11:28:19.309 http-nio-8042-exec-4 cache-control: no-cache, private
+2023-06-14 11:28:19.309 http-nio-8042-exec-4 content-type: application/json
+2023-06-14 11:28:19.309 http-nio-8042-exec-4 x-kubernetes-pf-flowschema-uid: 13ab64e9-56be-42b6-8c60-1b6c5887dc61
+2023-06-14 11:28:19.309 http-nio-8042-exec-4 x-kubernetes-pf-prioritylevel-uid: f29aebc9-e5c0-4435-a707-264e40c33ff2
+2023-06-14 11:28:19.309 http-nio-8042-exec-4 date: Wed, 14 Jun 2023 11:28:19 GMT
+2023-06-14 11:28:19.310 http-nio-8042-exec-4 
+2023-06-14 11:28:19.310 http-nio-8042-exec-4 {
+  "kind": "StatefulSet",
+  "apiVersion": "apps/v1",
+  "metadata": {
+    "name": "data-source-file-telstra",
+    "namespace": "opolo",
+    "uid": "28645f99-61c8-4460-a622-b252b62a2868",
+    "resourceVersion": "17849721",
+    "generation": 1,
+    "creationTimestamp": "2023-06-14T11:28:19Z",
+    "labels": {
+      "resourceName": "DATA_SOURCE_FILE_TELSTRA",
+      "resourceType": "datasource"
+    },
+    "managedFields": [
+      {
+        "manager": "Kubernetes Java Client",
+        "operation": "Update",
+        "apiVersion": "apps/v1",
+        "time": "2023-06-14T11:28:19Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:labels": {
+              ".": {},
+              "f:resourceName": {},
+              "f:resourceType": {}
+            }
+          },
+          "f:spec": {
+            "f:podManagementPolicy": {},
+            "f:replicas": {},
+            "f:revisionHistoryLimit": {},
+            "f:selector": {},
+            "f:serviceName": {},
+            "f:template": {
+              "f:metadata": {
+                "f:annotations": {
+                  ".": {},
+                  "f:iam.amazonaws.com/role": {}
+                },
+                "f:labels": {
+                  ".": {},
+                  "f:app": {},
+                  "f:resourceName": {},
+                  "f:resourceType": {}
+                }
+              },
+              "f:spec": {
+                "f:containers": {
+                  "k:{\"name\":\"sift-datasource-data-source-file-telstra\"}": {
+                    ".": {},
+                    "f:env": {
+                      ".": {},
+                      "k:{\"name\":\"APP_LOG_LEVEL\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"CONFIG_BUCKET\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"CONTAINER_ID\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"DEFAULT_BUCKET\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"DS_NAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"ELASTICSEARCH_SIFT_BADRECORDS_INDEX\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"ELASTICSEARCH_SIFT_FILREPORT_INDEX\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"ELASTICSEARCH_SIFT_LOGS_INDEX\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"ELASTICSEARCH_URL\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"HEAP_SIZE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"JVM_PARAM\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"LOG_LEVEL\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"LOG_TYPE\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"PERSIST_ADDRESS\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"PERSIST_CLIENT\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"PERSIST_PASSWORD\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"PERSIST_SSL\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"PERSIST_USERNAME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      },
+                      "k:{\"name\":\"SLEEPTIME\"}": {
+                        ".": {},
+                        "f:name": {},
+                        "f:value": {}
+                      }
+                    },
+                    "f:image": {},
+                    "f:imagePullPolicy": {},
+                    "f:name": {},
+                    "f:resources": {
+                      ".": {},
+                      "f:limits": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      },
+                      "f:requests": {
+                        ".": {},
+                        "f:cpu": {},
+                        "f:memory": {}
+                      }
+                    },
+                    "f:terminationMessagePath": {},
+                    "f:terminationMessagePolicy": {},
+                    "f:volumeMounts": {
+                      ".": {},
+                      "k:{\"mountPath\":\"/opt/couchbase/ssl/opolo_couchbase_cluster_np.pem\"}": {
+                        ".": {},
+                        "f:mountPath": {},
+                        "f:name": {},
+                        "f:subPath": {}
+                      }
+                    }
+                  }
+                },
+                "f:dnsPolicy": {},
+                "f:imagePullSecrets": {
+                  ".": {},
+                  "k:{\"name\":\"sift-cred\"}": {}
+                },
+                "f:nodeSelector": {},
+                "f:restartPolicy": {},
+                "f:schedulerName": {},
+                "f:securityContext": {},
+                "f:terminationGracePeriodSeconds": {},
+                "f:volumes": {
+                  ".": {},
+                  "k:{\"name\":\"couchbase-pem-volume\"}": {
+                    ".": {},
+                    "f:configMap": {
+                      ".": {},
+                      "f:defaultMode": {},
+                      "f:name": {}
+                    },
+                    "f:name": {}
+                  }
+                }
+              }
+            },
+            "f:updateStrategy": {
+              "f:rollingUpdate": {
+                ".": {},
+                "f:partition": {}
+              },
+              "f:type": {}
+            }
+          }
+        }
+      }
+    ]
+  },
+  "spec": {
+    "replicas": 1,
+    "selector": {
+      "matchLabels": {
+        "app": "sift-datasource-data-source-file-telstra"
+      }
+    },
+    "template": {
+      "metadata": {
+        "creationTimestamp": null,
+        "labels": {
+          "app": "sift-datasource-data-source-file-telstra",
+          "resourceName": "DATA_SOURCE_FILE_TELSTRA",
+          "resourceType": "datasource"
+        },
+        "annotations": {
+          "iam.amazonaws.com/role": "arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole"
+        }
+      },
+      "spec": {
+        "volumes": [
+          {
+            "name": "couchbase-pem-volume",
+            "configMap": {
+              "name": "couchbase-pem",
+              "defaultMode": 420
+            }
+          }
+        ],
+        "containers": [
+          {
+            "name": "sift-datasource-data-source-file-telstra",
+            "image": "kwdevops/sift-core:V4.5.0-TelstraResilience",
+            "env": [
+              {
+                "name": "DS_NAME",
+                "value": "DATA_SOURCE_FILE_TELSTRA"
+              },
+              {
+                "name": "PERSIST_ADDRESS",
+                "value": "10.193.33.106,10.193.33.238,10.193.34.15,10.193.35.50"
+              },
+              {
+                "name": "LOG_LEVEL",
+                "value": "info"
+              },
+              {
+                "name": "HEAP_SIZE",
+                "value": "256m"
+              },
+              {
+                "name": "JVM_PARAM",
+                "value": "-XX:+UseConcMarkSweepGC"
+              },
+              {
+                "name": "ELASTICSEARCH_URL",
+                "value": "http://elk-aws.uat.th.intranet:9200"
+              },
+              {
+                "name": "ELASTICSEARCH_SIFT_LOGS_INDEX",
+                "value": "datasourcelogs"
+              },
+              {
+                "name": "CONTAINER_ID",
+                "value": "DATA_SOURCE_FILE_TELSTRA"
+              },
+              {
+                "name": "ELASTICSEARCH_SIFT_FILREPORT_INDEX",
+                "value": "siftprocessingstats"
+              },
+              {
+                "name": "ELASTICSEARCH_SIFT_BADRECORDS_INDEX",
+                "value": "siftbadrecords"
+              },
+              {
+                "name": "PERSIST_CLIENT",
+                "value": "couchbasev7"
+              },
+              {
+                "name": "SLEEPTIME",
+                "value": "1"
+              },
+              {
+                "name": "PERSIST_SSL",
+                "value": "/opt/couchbase/ssl/opolo_couchbase_cluster_np.pem"
+              },
+              {
+                "name": "PERSIST_USERNAME",
+                "value": "opolonp"
+              },
+              {
+                "name": "PERSIST_PASSWORD",
+                "value": "0polodef23"
+              },
+              {
+                "name": "CONFIG_BUCKET",
+                "value": "opolo_config_np"
+              },
+              {
+                "name": "DEFAULT_BUCKET",
+                "value": "opolo_default_np"
+              },
+              {
+                "name": "APP_LOG_LEVEL",
+                "value": "INFO"
+              },
+              {
+                "name": "LOG_TYPE",
+                "value": "file"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "400m",
+                "memory": "1G"
+              },
+              "requests": {
+                "cpu": "100m",
+                "memory": "300Mi"
+              }
+            },
+            "volumeMounts": [
+              {
+                "name": "couchbase-pem-volume",
+                "mountPath": "/opt/couchbase/ssl/opolo_couchbase_cluster_np.pem",
+                "subPath": "opolo_couchbase_cluster_np.pem"
+              }
+            ],
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "imagePullPolicy": "Always"
+          }
+        ],
+        "restartPolicy": "Always",
+        "terminationGracePeriodSeconds": 30,
+        "dnsPolicy": "ClusterFirst",
+        "nodeSelector": {
+          "deployDatasource": "true"
+        },
+        "securityContext": {},
+        "imagePullSecrets": [
+          {
+            "name": "sift-cred"
+          }
+        ],
+        "schedulerName": "default-scheduler"
+      }
+    },
+    "serviceName": "sift-datasource-data-source-file-telstra",
+    "podManagementPolicy": "OrderedReady",
+    "updateStrategy": {
+      "type": "RollingUpdate",
+      "rollingUpdate": {
+        "partition": 0
+      }
+    },
+    "revisionHistoryLimit": 10
+  },
+  "status": {
+    "replicas": 0,
+    "availableReplicas": 0
+  }
+}
+2023-06-14 11:28:19.310 http-nio-8042-exec-4 <-- END HTTP (12124-byte body)
+2023-06-14 11:28:19.315 http-nio-8042-exec-4 Started job data-source-file-telstra
+2023-06-14 11:28:19.315 http-nio-8042-exec-4 Updating the job info . Job Id DATA_SOURCE_FILE_TELSTRA , status : RUNNING
+2023-06-14 11:28:26.525 http-nio-8042-exec-6 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource
+2023-06-14 11:29:38.002 http-nio-8042-exec-8 Getting yaml file for job : DATA_SOURCE_FILE_TELSTRA and job type datasource

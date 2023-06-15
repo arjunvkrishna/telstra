@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-ocshil-fulfilmenthandler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ocshil-fulfilmenthandler-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: ocshil-fulfilmenthandler-pod
+        ResourceGroup: so
+    spec:
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: "true"
+      containers:
+        - name: opolo-ocshil-fulfilmenthandler
+          image: knowesis/sift-so:so-ocsil-fulfilmenthandler-opolo.4.0-TELSTRA
+          resources:
+            requests:
+             cpu: 100m
+             memory: 100M
+            limits:
+             cpu: 1
+             memory: 500M
+          imagePullPolicy: Always
+          envFrom:
+          - configMapRef:
+              name: so-opolo-ocshil-fulfilmenthandler-cm
+        volumeMounts:
+        - mountPath: /opt/knowesis/sift/certs/okapi-client.jks
+          subPath: okapi-client.jks
+          name: client-volume
+        - mountPath: /opt/knowesis/sift/certs/okapi-server.jks
+          subPath: okapi-server.jks
+          name: server-volume
+      volumes:
+      - name: client-volume
+        configMap:
+          name: client-jks
+      - name: server-volume
+        configMap:
+          name: server-jks      

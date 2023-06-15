@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: opolo-real
+  labels:
+    app: opolo-real-pod
+spec:
+  ports:
+    - name: http0
+      port: 3013
+  selector:
+    app: opolo-real-pod
+  type: ClusterIP

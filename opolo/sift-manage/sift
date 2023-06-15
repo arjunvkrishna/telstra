@@ -1,0 +1,81 @@
+NAMESPACE=opolo
+CONTAINER_ID=`kubectl -n $NAMESPACE get pods | grep sift-manage| awk '{print $1}'`
+SERVICE_PORT=`kubectl -n $NAMESPACE get svc siftmanage-svc -o=jsonpath='{.spec.ports[?(@.port==8042)].nodePort}'`
+if [ -z "$CONTAINER_ID" ]
+then
+	echo "Sift Manage not running!!!"
+	echo "Starting Sift Manage"
+	kubectl -n $NAMESPACE apply -f sift-manage.yaml
+	exit 1
+fi
+
+COMMAND=$1
+if [ ${COMMAND} == "logs" ]
+then
+ kubectl -n $NAMESPACE logs -f --tail 100 $CONTAINER_ID sift-manage
+ exit 1
+fi
+
+if [ ${COMMAND} == "restart" ]
+then
+   kubectl -n $NAMESPACE delete deploy sift-manage
+  kubectl -n $NAMESPACE apply -f /root/opolo/sift-manage/sift-manage.yaml
+  exit 1
+
+fi
+if [ ${COMMAND} == "setYaml" ]
+then
+    if [ "$#" -ne 4 ]
+    then
+	echo " USAGE: sift setYaml <JOB_ID> <JOB_TYPE> <FILENAME> "
+        exit 1
+    fi
+    curl -X POST http://localhost:$SERVICE_PORT/siftmanage/v1/api/yaml/${2}/${3} -F "file=@$4"
+    exit 1
+fi
+
+
+if [ ${COMMAND} == "getYaml" ]
+then
+    if [ "$#" -ne 3 ]
+    then
+        echo " USAGE: sift getYaml <JOB_ID> <JOB_TYPE> "
+        exit 1
+    fi
+    curl http://localhost:$SERVICE_PORT/siftmanage/v1/api/yaml/${2}/${3}
+    exit  1
+fi
+
+if [ ${COMMAND} == "rmYaml" ]
+then
+    if [ "$#" -ne 3 ]
+    then
+        echo " USAGE: sift rmYaml <JOB_ID> <JOB_TYPE> "
+        exit 1
+    fi
+    curl -X DELETE http://localhost:$SERVICE_PORT/siftmanage/v1/api/yaml/${2}/${3}
+    exit  1
+fi
+
+if [ ${COMMAND} == "getConfigs" ]
+then
+    if [ "$#" -ne 3 ]
+    then
+        echo " USAGE: sift getYaml <JOB_ID> <JOB_TYPE> "
+        exit 1
+    fi
+    curl http://localhost:$SERVICE_PORT/siftmanage/v1/api/config/${2}/${3}
+    exit  1
+fi
+
+if [ ${COMMAND} == "setConfigs" ]
+then
+    if [ "$#" -ne 4 ]
+    then
+        echo " USAGE: sift setYaml <JOB_ID> <JOB_TYPE> <FILENAME> "
+        exit 1
+    fi
+    curl -X POST http://localhost:$SERVICE_PORT/siftmanage/v1/api/config/${2}/${3} -F "file=@$4"
+    exit 1
+fi
+kubectl -n $NAMESPACE exec -it $CONTAINER_ID "/opt/knowesis/sift/siftmanage/siftmanageCLI.sh" $* 2> /dev/null
