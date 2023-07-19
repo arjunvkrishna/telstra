@@ -1,0 +1,518 @@
+so-opolo-mps-cloud-handler-0.0.1
+Starting...
+23:34:42,843 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [/opt/knowesis/sift/orchestrator/conf/so-opolo-mps-cloud-handler-logback.xml] at [file:/opt/knowesis/sift/orchestrator/conf/so-opolo-mps-cloud-handler-logback.xml]
+23:34:43,128 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+23:34:43,133 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [file]
+23:34:43,160 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@315138752 - Will use zip compression
+23:34:43,161 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@315138752 - Will use the pattern /opt/knowesis/sift/orchestrator/log/archive/so-opolo-mps-cloud-handler.log-%d{yyyy-MM-dd}_%i for the active file
+23:34:43,164 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7276c8cd - The date pattern is 'yyyy-MM-dd' from file name pattern '/opt/knowesis/sift/orchestrator/log/archive/so-opolo-mps-cloud-handler.log-%d{yyyy-MM-dd}_%i.zip'.
+23:34:43,164 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7276c8cd - Roll-over at midnight.
+23:34:43,168 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7276c8cd - Setting initial period to Mon Jul 17 23:34:43 AEST 2023
+23:34:43,169 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7276c8cd - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+23:34:43,169 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@7276c8cd - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+23:34:43,170 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.PatternLayout] for [layout] property
+23:34:43,243 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[file] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+23:34:43,243 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[file] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+23:34:43,243 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[file] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+23:34:43,246 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[file] - Active log file name: /opt/knowesis/sift/orchestrator/log/so-opolo-mps-cloud-handler.log
+23:34:43,246 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[file] - File property is set to [/opt/knowesis/sift/orchestrator/log/so-opolo-mps-cloud-handler.log]
+23:34:43,247 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [com.internetitem.logback.elasticsearch.ElasticsearchAppender]
+23:34:43,252 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [elastic]
+23:34:43,256 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.ElasticsearchProperties] for [properties] property
+23:34:43,257 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+23:34:43,258 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+23:34:43,258 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+23:34:43,259 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+23:34:43,263 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.HttpRequestHeaders] for [headers] property
+23:34:43,263 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.HttpRequestHeader] for [header] property
+23:34:43,329 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+23:34:43,329 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [perf]
+23:34:43,335 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@366590980 - Will use zip compression
+23:34:43,336 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@366590980 - Will use the pattern /opt/knowesis/sift/orchestrator/log/archive/so-opolo-mps-cloud-handler-performance.log-%d{yyyy-MM-dd}_%i for the active file
+23:34:43,337 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@473b46c3 - The date pattern is 'yyyy-MM-dd' from file name pattern '/opt/knowesis/sift/orchestrator/log/archive/so-opolo-mps-cloud-handler-performance.log-%d{yyyy-MM-dd}_%i.zip'.
+23:34:43,337 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@473b46c3 - Roll-over at midnight.
+23:34:43,338 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@473b46c3 - Setting initial period to Mon Jul 17 23:34:43 AEST 2023
+23:34:43,338 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@473b46c3 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+23:34:43,338 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@473b46c3 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+23:34:43,338 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.PatternLayout] for [layout] property
+23:34:43,339 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[perf] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+23:34:43,339 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[perf] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+23:34:43,339 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[perf] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+23:34:43,339 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[perf] - Active log file name: /opt/knowesis/sift/orchestrator/log/so-opolo-mps-cloud-handler-performance.log
+23:34:43,339 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[perf] - File property is set to [/opt/knowesis/sift/orchestrator/log/so-opolo-mps-cloud-handler-performance.log]
+23:34:43,339 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:34:43,341 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [stdout]
+23:34:43,342 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:34:43,344 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache] to INFO
+23:34:43,344 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [org.apache] to false
+23:34:43,346 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@100:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+23:34:43,346 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[org.apache]
+23:34:43,347 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.knowesis.sift.orchestrator.processor.PerformanceStaticsProcessor] to INFO
+23:34:43,347 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.knowesis.sift.orchestrator.processor.PerformanceStaticsProcessor] to false
+23:34:43,348 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@105:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+23:34:43,348 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [perf] to Logger[com.knowesis.sift.orchestrator.processor.PerformanceStaticsProcessor]
+23:34:43,348 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.camel.component.metrics.MetricsComponent] to INFO
+23:34:43,348 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [org.apache.camel.component.metrics.MetricsComponent] to false
+23:34:43,348 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@110:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+23:34:43,348 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [perf] to Logger[org.apache.camel.component.metrics.MetricsComponent]
+23:34:43,348 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.knowesis] to INFO
+23:34:43,348 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.knowesis] to false
+23:34:43,348 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@115:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+23:34:43,348 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[com.knowesis]
+23:34:43,348 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+23:34:43,349 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@120:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][root][immediateFlush]]
+23:34:43,349 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[ROOT]
+23:34:43,349 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+23:34:43,350 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@f0f2775 - Registering current configuration as safe fallback point
+[07/17/23 23:34:43:385] [main] ClassPathXmlApplic I Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@75c072cb: startup date [Mon Jul 17 23:34:43 AEST 2023]; root of context hierarchy 
+[07/17/23 23:34:43:464] [main] XmlBeanDefinitionR I Loading XML bean definitions from class path resource [META-INF/spring/camel-context.xml] 
+[07/17/23 23:34:45:932] [main] XmlBeanDefinitionR I Loading XML bean definitions from URL [file:/opt/knowesis/sift/orchestrator/conf/so-opolo-mps-cloud-handler-routes.xml] 
+[07/17/23 23:34:47:244] [main] DefaultTypeConvert I Type converters loaded (core: 195, classpath: 14) 
+[07/17/23 23:34:47:255] [main] SpringCamelContext I Apache Camel 2.22.1 (CamelContext: camel-1) is starting 
+[07/17/23 23:34:47:256] [main] SpringCamelContext I StreamCaching is enabled on CamelContext: camel-1 
+[07/17/23 23:34:47:257] [main] SpringCamelContext I MDC logging is enabled on CamelContext: camel-1 
+[07/17/23 23:34:47:257] [main] ManagedManagementS I JMX is enabled 
+[07/17/23 23:34:48:557] [main] SSLContextParamete I Available providers: SUN version 1.8. 
+javax.net.ssl|FINE|01|main|2023-07-17 23:34:48.771 AEST|SSLCipher.java:438|jdk.tls.keyLimits:  entry = AES/GCM/NoPadding KeyUpdate 2^37. AES/GCM/NOPADDING:KEYUPDATE = 137438953472
+[07/17/23 23:34:48:864] [main] SSLContextParamete I Available providers: SUN version 1.8. 
+[07/17/23 23:34:48:939] [main] HttpComponent      I Created ClientConnectionManager org.apache.http.impl.conn.PoolingHttpClientConnectionManager@15f8701f 
+[07/17/23 23:34:49:061] [main] SSLContextParamete I Available providers: SUN version 1.8. 
+[07/17/23 23:34:49:137] [main] SSLContextParamete I Available providers: SUN version 1.8. 
+[07/17/23 23:34:49:142] [main] HttpComponent      I Created ClientConnectionManager org.apache.http.impl.conn.PoolingHttpClientConnectionManager@633a2e99 
+[07/17/23 23:34:49:230] [main] DefaultStreamCachi I StreamCaching in use with spool directory: /tmp/camel/camel-tmp-6483841d-533f-4f83-9de1-1e0c6a9b6b9a and rules: [Spool > 128K body size] 
+[07/17/23 23:34:49:634] [main] SedaEndpoint       I Endpoint seda://provisionRoute?blockWhenFull=true&size=100 is using shared queue: seda://provisionRoute with size: 100 
+[07/17/23 23:34:49:661] [main] SedaEndpoint       I Endpoint seda://provisionRoute?concurrentConsumers=1&size=100 is using shared queue: seda://provisionRoute with size: 100 
+[07/17/23 23:34:49:764] [main] SedaEndpoint       I Endpoint seda://dbLogging?concurrentConsumers=10&size=100 is using shared queue: seda://dbLogging with size: 100 
+[07/17/23 23:34:49:839] [main] SedaEndpoint       I Endpoint seda://notifyMaster?concurrentConsumers=10&size=100 is using shared queue: seda://notifyMaster with size: 100 
+[07/17/23 23:34:49:850] [main] SedaEndpoint       I Endpoint seda://dbLogging?blockWhenFull=true&size=100&waitForTaskToComplete=Never is using shared queue: seda://dbLogging with size: 100 
+[07/17/23 23:34:49:852] [main] SedaEndpoint       I Endpoint seda://notifyMaster?blockWhenFull=true&size=100&waitForTaskToComplete=Never is using shared queue: seda://notifyMaster with size: 100 
+[07/17/23 23:34:50:034] [main] ProducerConfig     I ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092, b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ 
+[07/17/23 23:34:50:064] [main] KafkaProducer      W [Producer clientId=producer-1] DefaultPartitioner is deprecated.  Please clear partitioner.class configuration setting to get the default partitioning behavior 
+[07/17/23 23:34:50:066] [main] KafkaProducer      W [Producer clientId=producer-1] delivery.timeout.ms should be equal to or larger than linger.ms + request.timeout.ms. Setting it to 305000. 
+[07/17/23 23:34:50:247] [main] ProducerConfig     W These configurations '[sasl.kerberos.ticket.renew.window.factor, sasl.kerberos.kinit.cmd, sasl.kerberos.ticket.renew.jitter, ssl.trustmanager.algorithm, ssl.keystore.type, sasl.kerberos.min.time.before.relogin, ssl.protocol, ssl.enabled.protocols, ssl.truststore.type, ssl.keymanager.algorithm]' were supplied but are not used yet. 
+[07/17/23 23:34:50:249] [main] AppInfoParser      I Kafka version: 3.3.2 
+[07/17/23 23:34:50:249] [main] AppInfoParser      I Kafka commitId: b66af662e61082cb 
+[07/17/23 23:34:50:249] [main] AppInfoParser      I Kafka startTimeMs: 1689600890247 
+[07/17/23 23:34:50:253] [main] ProducerConfig     I ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092, b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ 
+[07/17/23 23:34:50:254] [main] KafkaProducer      W [Producer clientId=producer-2] DefaultPartitioner is deprecated.  Please clear partitioner.class configuration setting to get the default partitioning behavior 
+[07/17/23 23:34:50:254] [main] KafkaProducer      W [Producer clientId=producer-2] delivery.timeout.ms should be equal to or larger than linger.ms + request.timeout.ms. Setting it to 305000. 
+[07/17/23 23:34:50:330] [main] ProducerConfig     W These configurations '[sasl.kerberos.ticket.renew.window.factor, sasl.kerberos.kinit.cmd, sasl.kerberos.ticket.renew.jitter, ssl.trustmanager.algorithm, ssl.keystore.type, sasl.kerberos.min.time.before.relogin, ssl.protocol, ssl.enabled.protocols, ssl.truststore.type, ssl.keymanager.algorithm]' were supplied but are not used yet. 
+[07/17/23 23:34:50:331] [main] AppInfoParser      I Kafka version: 3.3.2 
+[07/17/23 23:34:50:331] [main] AppInfoParser      I Kafka commitId: b66af662e61082cb 
+[07/17/23 23:34:50:331] [main] AppInfoParser      I Kafka startTimeMs: 1689600890331 
+[07/17/23 23:34:50:342] [main] SpringCamelContext I Route: getAuthTokenRoute started and consuming from: direct://getAUTHToken 
+[07/17/23 23:34:50:343] [main] SpringCamelContext I Route: initializeAuthTokenRouteFirst started and consuming from: timer://initializeToken?repeatCount=1 
+[07/17/23 23:34:50:344] [main] KafkaConsumer      I Starting Kafka consumer on topic: so.hendrix.in with breakOnFirstError: false 
+[07/17/23 23:34:50:357] [main] ConsumerConfig     I ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092, b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-mps-hendrix-handler-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = mps-hendrix-handler
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 60000
+	max.poll.records = 1
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 40000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[07/17/23 23:34:50:548] [main] ConsumerConfig     W These configurations '[sasl.kerberos.ticket.renew.window.factor, sasl.kerberos.kinit.cmd, sasl.kerberos.ticket.renew.jitter, ssl.trustmanager.algorithm, ssl.keystore.type, sasl.kerberos.min.time.before.relogin, ssl.protocol, ssl.enabled.protocols, ssl.truststore.type, ssl.keymanager.algorithm]' were supplied but are not used yet. 
+[07/17/23 23:34:50:548] [main] AppInfoParser      I Kafka version: 3.3.2 
+[07/17/23 23:34:50:548] [main] AppInfoParser      I Kafka commitId: b66af662e61082cb 
+[07/17/23 23:34:50:548] [main] AppInfoParser      I Kafka startTimeMs: 1689600890548 
+[07/17/23 23:34:50:549] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] KafkaConsumer      I Subscribing so.hendrix.in-Thread 0 to topic so.hendrix.in 
+[07/17/23 23:34:50:549] [main] SpringCamelContext I Route: inputRoute started and consuming from: kafka://so.hendrix.in?autoOffsetReset=latest&brokers=b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com%3A9092%2Cb-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com%3A9092&groupId=mps-hendrix-handler&maxPollIntervalMs=60000&maxPollRecords=1 
+[07/17/23 23:34:50:552] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] KafkaConsumer      I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Subscribed to topic(s): so.hendrix.in 
+[07/17/23 23:34:50:556] [main] SpringCamelContext I Route: provisionRoute started and consuming from: seda://provisionRoute?concurrentConsumers=1&size=100 
+[07/17/23 23:34:50:629] [main] SpringCamelContext I Route: dbRoute started and consuming from: seda://dbLogging?concurrentConsumers=10&size=100 
+[07/17/23 23:34:50:633] [main] SpringCamelContext I Route: notifyMaster started and consuming from: seda://notifyMaster?concurrentConsumers=10&size=100 
+[07/17/23 23:34:50:634] [main] SpringCamelContext I Route: route1 started and consuming from: direct://responseProcessorRoute 
+[07/17/23 23:34:50:635] [main] SpringCamelContext I Total 7 routes, of which 7 are started 
+[07/17/23 23:34:50:636] [main] SpringCamelContext I Apache Camel 2.22.1 (CamelContext: camel-1) started in 3.380 seconds 
+[07/17/23 23:34:50:643] [main] DefaultLifecyclePr I Starting beans in phase 2147483646 
+[07/17/23 23:34:51:433] [kafka-producer-network-thread | producer-1] Metadata           I [Producer clientId=producer-1] Cluster ID: UAP21MjlQTSkIoYkpuKEBg 
+[07/17/23 23:34:51:433] [kafka-producer-network-thread | producer-2] Metadata           I [Producer clientId=producer-2] Cluster ID: UAP21MjlQTSkIoYkpuKEBg 
+[07/17/23 23:34:51:434] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] Metadata           I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Resetting the last seen epoch of partition so.hendrix.in-0 to 3 since the associated topicId changed from null to 7uNV2KPFR7O8TbxAIkvTvA 
+[07/17/23 23:34:51:438] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] Metadata           I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Cluster ID: UAP21MjlQTSkIoYkpuKEBg 
+[07/17/23 23:34:51:439] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Discovered group coordinator b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092 (id: 2147483645 rack: null) 
+[07/17/23 23:34:51:444] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] (Re-)joining group 
+[07/17/23 23:34:51:455] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Request joining group due to: need to re-join with the given member-id: consumer-mps-hendrix-handler-1-dfa52a0b-082c-48c9-8d51-71927ca882bf 
+[07/17/23 23:34:51:455] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+[07/17/23 23:34:51:455] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] (Re-)joining group 
+[07/17/23 23:34:51:650] [Camel (camel-1) thread #24 - timer://initializeToken] initializeAuthToke I Initializing authentication token 
+[07/17/23 23:34:51:684] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Successfully joined group with generation Generation{generationId=16, memberId='consumer-mps-hendrix-handler-1-dfa52a0b-082c-48c9-8d51-71927ca882bf', protocol='range'} 
+[07/17/23 23:34:51:731] [kafka-coordinator-heartbeat-thread | mps-hendrix-handler] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Successfully synced group in generation Generation{generationId=16, memberId='consumer-mps-hendrix-handler-1-dfa52a0b-082c-48c9-8d51-71927ca882bf', protocol='range'} 
+[07/17/23 23:34:51:734] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Notifying assignor about the new Assignment(partitions=[]) 
+[07/17/23 23:34:51:734] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Adding newly assigned partitions:  
+[07/17/23 23:34:51:739] [Camel (camel-1) thread #24 - timer://initializeToken] getAuthTokenRoute  I Invoking AUTH service 
+[07/17/23 23:34:52:373] [Camel (camel-1) thread #24 - timer://initializeToken] getAuthTokenRoute  I Token received from AUTH API 
+[07/17/23 23:34:52:428] [Camel (camel-1) thread #24 - timer://initializeToken] getAuthTokenRoute  I Authentication token updated 
+[07/17/23 23:35:18:693] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Request joining group due to: group is already rebalancing 
+[07/17/23 23:35:18:694] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Revoke previously assigned partitions  
+[07/17/23 23:35:18:695] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] (Re-)joining group 
+[07/17/23 23:35:18:697] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Successfully joined group with generation Generation{generationId=17, memberId='consumer-mps-hendrix-handler-1-dfa52a0b-082c-48c9-8d51-71927ca882bf', protocol='range'} 
+[07/17/23 23:35:18:699] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Finished assignment for group at generation 17: {consumer-mps-hendrix-handler-1-dfa52a0b-082c-48c9-8d51-71927ca882bf=Assignment(partitions=[so.hendrix.in-0])} 
+[07/17/23 23:35:18:703] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Successfully synced group in generation Generation{generationId=17, memberId='consumer-mps-hendrix-handler-1-dfa52a0b-082c-48c9-8d51-71927ca882bf', protocol='range'} 
+[07/17/23 23:35:18:704] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Notifying assignor about the new Assignment(partitions=[so.hendrix.in-0]) 
+[07/17/23 23:35:18:707] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Adding newly assigned partitions: so.hendrix.in-0 
+[07/17/23 23:35:18:716] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] ConsumerCoordinato I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Setting offset for partition so.hendrix.in-0 to the committed offset FetchPosition{offset=8, offsetEpoch=Optional[3], currentLeader=LeaderAndEpoch{leader=Optional[b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092 (id: 2 rack: apse2-az1)], epoch=3}} 
+[07/17/23 23:36:38:198] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] inputRoute         I product Message received in so.hendrix.in: body -> {"msisdn":"0475079307","flowId":"047507930734545","offerId":"T_FREE_BESTOWAL_TEXT_28E_OFFER","action":"COREFULFILMENT","cac":"5001940655","contactId":"0035L000003SwYOQA0","sourceSystem":"H","triggerTimestamp":1681642855781,"subscriberId":"","triggerId":"DISASTER_EVENT","programId":"DISASTER_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_NM_UNL","provisonedValue":"BPO_C_MB_PRE_SB_NM_UNL","actionResponse":"","offerStartDate":null,"offerEndDate":null,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Your bonus text havebeen added to your service to use in Australia. Thanks for being with Telstra..","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_NM","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"047507930734545","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false,"userId":""} 
+[07/17/23 23:36:38:344] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I Invoking API : body -> {"orderId":"047507930734545BPO_C_MB_PRE_SB_NM_UNL","productId":"BPO_C_MB_PRE_SB_NM_UNL","amount":"0","planId":"BPO_C_MB_PRE_SB_NM","paymentChannel":"SIFT","paymentType":"BONUS"}  
+[07/17/23 23:36:46:237] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I The response received after API request-> {"status":200,"code":0,"message":"Success","time":"2023-07-17T13:36:46.186","correlationId":"047507930734545BPO_C_MB_PRE_SB_NM_UNL","data":{"newBalance":0,"expiryDate":"05/07/2023 23:59:59","creditedAmount":"0","orderId":"30011195133902","productId":"BPO_C_MB_PRE_SB_NM_UNL"}} 
+[07/17/23 23:36:46:275] [Camel (camel-1) thread #13 - seda://dbLogging] dbRoute            I DB Request Body ->{"msisdn":"0475079307","flowId":"047507930734545","offerId":"T_FREE_BESTOWAL_TEXT_28E_OFFER","action":"FULFILL-PR","cac":"5001940655","contactId":"0035L000003SwYOQA0","sourceSystem":"H","triggerTimestamp":1681642855781,"subscriberId":"","triggerId":"DISASTER_EVENT","programId":"DISASTER_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_NM_UNL","provisonedValue":"BPO_C_MB_PRE_SB_NM_UNL","actionResponse":"0:Success","offerStartDate":null,"offerEndDate":null,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Your bonus text havebeen added to your service to use in Australia. Thanks for being with Telstra..","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_NM","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"047507930734545","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false,"userId":""} 
+[07/17/23 23:36:46:278] [Camel (camel-1) thread #19 - seda://notifyMaster] notifyMaster       I Notify Master Body ->{"msisdn":"0475079307","flowId":"047507930734545","offerId":"T_FREE_BESTOWAL_TEXT_28E_OFFER","action":"FULFILL-PR","cac":"5001940655","contactId":"0035L000003SwYOQA0","sourceSystem":"H","triggerTimestamp":1681642855781,"subscriberId":"","triggerId":"DISASTER_EVENT","programId":"DISASTER_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_NM_UNL","provisonedValue":"BPO_C_MB_PRE_SB_NM_UNL","actionResponse":"0:Success","offerStartDate":null,"offerEndDate":null,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Your bonus text havebeen added to your service to use in Australia. Thanks for being with Telstra..","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_NM","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"047507930734545","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false,"userId":""} 
+[07/17/23 23:36:46:289] [kafka-producer-network-thread | producer-1] Metadata           I [Producer clientId=producer-1] Resetting the last seen epoch of partition so.db.topic-0 to 3 since the associated topicId changed from null to Nt9J42UnQ8-SE8i953K_oQ 
+[07/17/23 23:36:46:332] [kafka-producer-network-thread | producer-2] Metadata           I [Producer clientId=producer-2] Resetting the last seen epoch of partition so.slaveresponse.in-0 to 3 since the associated topicId changed from null to Js4H03SeT6esg0zInkwsQg 
+[07/17/23 23:43:51:590] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] NetworkClient      I [Consumer clientId=consumer-mps-hendrix-handler-1, groupId=mps-hendrix-handler] Node -2 disconnected. 
+[07/17/23 23:44:51:499] [kafka-producer-network-thread | producer-1] NetworkClient      I [Producer clientId=producer-1] Node -1 disconnected. 
+[07/17/23 23:44:51:499] [kafka-producer-network-thread | producer-2] NetworkClient      I [Producer clientId=producer-2] Node -1 disconnected. 
+[07/17/23 23:49:51:544] [kafka-producer-network-thread | producer-1] NetworkClient      I [Producer clientId=producer-1] Node 2 disconnected. 
+[07/18/23 22:28:39:850] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] inputRoute         I product Message received in so.hendrix.in: body -> {"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"COREFULFILMENT","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:28:39:862] [Camel (camel-1) thread #3 - seda://provisionRoute] getAuthTokenRoute  I Invoking AUTH service 
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.865 AEST|Alert.java:238|Received alert message (
+"Alert": {
+  "level"      : "warning",
+  "description": "close_notify"
+}
+)
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.866 AEST|SSLSocketImpl.java:761|close outbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.867 AEST|SSLSocketImpl.java:726|close inbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.867 AEST|SSLSocketImpl.java:548|duplex close of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.867 AEST|SSLSocketImpl.java:1629|close the SSL connection (passive)
+[07/18/23 22:28:39:960] [Camel (camel-1) thread #3 - seda://provisionRoute] getAuthTokenRoute  I Token received from AUTH API 
+[07/18/23 22:28:39:960] [Camel (camel-1) thread #3 - seda://provisionRoute] getAuthTokenRoute  I Authentication token updated 
+[07/18/23 22:28:39:968] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I Invoking API : body -> {"orderId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","productId":"BPO_C_MB_PRE_SB_ND_10GB","amount":"0","planId":"BPO_C_MB_PRE_SB_ND","paymentChannel":"SIFT","paymentType":"BONUS"}  
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.969 AEST|Alert.java:238|Received alert message (
+"Alert": {
+  "level"      : "warning",
+  "description": "close_notify"
+}
+)
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.970 AEST|SSLSocketImpl.java:761|close outbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.970 AEST|SSLSocketImpl.java:726|close inbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.970 AEST|SSLSocketImpl.java:548|duplex close of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:28:39.971 AEST|SSLSocketImpl.java:1629|close the SSL connection (passive)
+[07/18/23 22:28:49:127] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I The response received after API request-> {"status":200,"code":0,"message":"Success","time":"2023-07-18T12:28:49.007","correlationId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","data":{"newBalance":0,"expiryDate":"05/07/2023 23:59:59","creditedAmount":"0","orderId":"30011250133184","productId":"BPO_C_MB_PRE_SB_ND_10GB"}} 
+[07/18/23 22:28:49:129] [Camel (camel-1) thread #13 - seda://dbLogging] dbRoute            I DB Request Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""}{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:28:49:130] [Camel (camel-1) thread #15 - seda://notifyMaster] notifyMaster       I Notify Master Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:28:49:132] [kafka-producer-network-thread | producer-2] Metadata           I [Producer clientId=producer-2] Resetting the last seen epoch of partition so.slaveresponse.in-0 to 3 since the associated topicId changed from null to Js4H03SeT6esg0zInkwsQg 
+[07/18/23 22:28:49:132] [kafka-producer-network-thread | producer-1] Metadata           I [Producer clientId=producer-1] Resetting the last seen epoch of partition so.db.topic-0 to 3 since the associated topicId changed from null to Nt9J42UnQ8-SE8i953K_oQ 
+[07/18/23 22:30:44:802] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] inputRoute         I product Message received in so.hendrix.in: body -> {"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"COREFULFILMENT","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:30:44:807] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I Invoking API : body -> {"orderId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","productId":"BPO_C_MB_PRE_SB_ND_10GB","amount":"0","planId":"BPO_C_MB_PRE_SB_ND","paymentChannel":"SIFT","paymentType":"BONUS"}  
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:30:44.809 AEST|Alert.java:238|Received alert message (
+"Alert": {
+  "level"      : "warning",
+  "description": "close_notify"
+}
+)
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:30:44.810 AEST|SSLSocketImpl.java:761|close outbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:30:44.810 AEST|SSLSocketImpl.java:726|close inbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:30:44.810 AEST|SSLSocketImpl.java:548|duplex close of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:30:44.811 AEST|SSLSocketImpl.java:1629|close the SSL connection (passive)
+[07/18/23 22:30:52:399] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I The response received after API request-> {"status":200,"code":0,"message":"Success","time":"2023-07-18T12:30:52.360","correlationId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","data":{"newBalance":0,"expiryDate":"05/07/2023 23:59:59","creditedAmount":"0","orderId":"150011250133189","productId":"BPO_C_MB_PRE_SB_ND_10GB"}} 
+[07/18/23 22:30:52:401] [Camel (camel-1) thread #10 - seda://dbLogging] dbRoute            I DB Request Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:30:52:402] [Camel (camel-1) thread #22 - seda://notifyMaster] notifyMaster       I Notify Master Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:37:18:552] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] inputRoute         I product Message received in so.hendrix.in: body -> {"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"COREFULFILMENT","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:37:18:557] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I Invoking API : body -> {"orderId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","productId":"BPO_C_MB_PRE_SB_ND_10GB","amount":"0","planId":"BPO_C_MB_PRE_SB_ND","paymentChannel":"SIFT","paymentType":"BONUS"}  
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:37:18.559 AEST|Alert.java:238|Received alert message (
+"Alert": {
+  "level"      : "warning",
+  "description": "close_notify"
+}
+)
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:37:18.559 AEST|SSLSocketImpl.java:761|close outbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:37:18.559 AEST|SSLSocketImpl.java:726|close inbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:37:18.560 AEST|SSLSocketImpl.java:548|duplex close of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:37:18.560 AEST|SSLSocketImpl.java:1629|close the SSL connection (passive)
+[07/18/23 22:37:26:617] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I The response received after API request-> {"status":200,"code":0,"message":"Success","time":"2023-07-18T12:37:26.581","correlationId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","data":{"newBalance":0,"expiryDate":"05/07/2023 23:59:59","creditedAmount":"0","orderId":"40011250133199","productId":"BPO_C_MB_PRE_SB_ND_10GB"}} 
+[07/18/23 22:37:26:622] [Camel (camel-1) thread #7 - seda://dbLogging] dbRoute            I DB Request Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:37:26:623] [Camel (camel-1) thread #14 - seda://notifyMaster] notifyMaster       I Notify Master Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:43:18:165] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] inputRoute         I product Message received in so.hendrix.in: body -> {"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"COREFULFILMENT","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:43:18:172] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I Invoking API : body -> {"orderId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","productId":"BPO_C_MB_PRE_SB_ND_10GB","amount":"0","planId":"BPO_C_MB_PRE_SB_ND","paymentChannel":"SIFT","paymentType":"BONUS"}  
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:43:18.174 AEST|Alert.java:238|Received alert message (
+"Alert": {
+  "level"      : "warning",
+  "description": "close_notify"
+}
+)
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:43:18.175 AEST|SSLSocketImpl.java:761|close outbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:43:18.175 AEST|SSLSocketImpl.java:726|close inbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:43:18.175 AEST|SSLSocketImpl.java:548|duplex close of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 22:43:18.175 AEST|SSLSocketImpl.java:1629|close the SSL connection (passive)
+[07/18/23 22:43:28:859] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I The response received after API request-> {"status":200,"code":0,"message":"Success","time":"2023-07-18T12:43:28.823","correlationId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","data":{"newBalance":0,"expiryDate":"05/07/2023 23:59:59","creditedAmount":"0","orderId":"80011250133204","productId":"BPO_C_MB_PRE_SB_ND_10GB"}} 
+[07/18/23 22:43:28:862] [Camel (camel-1) thread #12 - seda://dbLogging] dbRoute            I DB Request Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:43:28:862] [Camel (camel-1) thread #20 - seda://notifyMaster] notifyMaster       I Notify Master Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 22:45:19:559] [kafka-producer-network-thread | producer-1] NetworkClient      I [Producer clientId=producer-1] Node 1 disconnected. 
+[07/18/23 23:26:53:860] [Camel (camel-1) thread #2 - KafkaConsumer[so.hendrix.in]] inputRoute         I product Message received in so.hendrix.in: body -> {"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"COREFULFILMENT","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 23:26:53:866] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I Invoking API : body -> {"orderId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","productId":"BPO_C_MB_PRE_SB_ND_10GB","amount":"0","planId":"BPO_C_MB_PRE_SB_ND","paymentChannel":"SIFT","paymentType":"BONUS"}  
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 23:26:53.868 AEST|Alert.java:238|Received alert message (
+"Alert": {
+  "level"      : "warning",
+  "description": "close_notify"
+}
+)
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 23:26:53.868 AEST|SSLSocketImpl.java:761|close outbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 23:26:53.868 AEST|SSLSocketImpl.java:726|close inbound of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 23:26:53.869 AEST|SSLSocketImpl.java:548|duplex close of SSLSocket
+javax.net.ssl|FINE|16|Camel (camel-1) thread #3 - seda://provisionRoute|2023-07-18 23:26:53.869 AEST|SSLSocketImpl.java:1629|close the SSL connection (passive)
+[07/18/23 23:27:02:121] [Camel (camel-1) thread #3 - seda://provisionRoute] provisionRoute     I The response received after API request-> {"status":200,"code":0,"message":"Success","time":"2023-07-18T13:27:02.054","correlationId":"04750793074343434BPO_C_MB_PRE_SB_ND_10GB","data":{"newBalance":0,"expiryDate":"05/07/2023 23:59:59","creditedAmount":"0","orderId":"150011250133209","productId":"BPO_C_MB_PRE_SB_ND_10GB"}} 
+[07/18/23 23:27:02:124] [Camel (camel-1) thread #9 - seda://dbLogging] dbRoute            I DB Request Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 23:27:02:124] [Camel (camel-1) thread #21 - seda://notifyMaster] notifyMaster       I Notify Master Body ->{"msisdn":"0475079307","flowId":"04750793074343434","offerId":"HH_IM_PD_LR_3A_OFFER","action":"FULFILL-PR","cac":"222111166644432","contactId":"DR1_SMS_Test","sourceSystem":"O","triggerTimestamp":1681841717039,"subscriberId":"-99","triggerId":"BESTOWAL_CONDITIONAL_1_PROGRAM_FT_HH_IM_PD_LR_3A_OFFER","programId":"BESTOWAL_CONDITIONAL_1_PROGRAM","contactDirection":"","actionStatus":"SUCCESS","PRODUCT_ID":"BPO_C_MB_PRE_SB_ND_10GB","provisonedValue":"BPO_C_MB_PRE_SB_ND_10GB","actionResponse":"0:Success","offerStartDate":1681841097378,"offerEndDate":1689292740000,"isControl":false,"isSimulated":false,"transactionId":"","targetSystem":"Hendrix","channel":"SMS","notificationMsg":"Thank you for Recharging!!!!!!Enjoy your 5GB Bonus","language":"en_US","isOptin":false,"optInChannel":"null","optInShortCode":"null","optInKeyword":"null","shortCode":"","sequence":"1","paymentType":"BONUS","paymentChannel":"SIFT","planId":"BPO_C_MB_PRE_SB_ND","amount":"0","validityHours":0,"validityDays":0,"parentFlowId":"04750793074343434","parentJourneyId":"","originalDefinitionKey":"","pattern":"FULFILMENTS.FULFILMENT.FULFILLMASTER","referenceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REGISTER_1","commsId":"","activityInstanceId":"d235bc94-6c07-87ce-7f00-52b79b48f7ed_REST-1","commsChannel":"NONE","activityVersionId":"1.1.0","isSilent":true,"userId":""} 
+[07/18/23 23:27:02:126] [kafka-producer-network-thread | producer-2] Metadata           I [Producer clientId=producer-2] Resetting the last seen epoch of partition so.slaveresponse.in-0 to 3 since the associated topicId changed from null to Js4H03SeT6esg0zInkwsQg 
+[07/18/23 23:27:02:126] [kafka-producer-network-thread | producer-1] Metadata           I [Producer clientId=producer-1] Resetting the last seen epoch of partition so.db.topic-0 to 3 since the associated topicId changed from null to Nt9J42UnQ8-SE8i953K_oQ 

@@ -1,0 +1,333 @@
+so-interactionhandler-0.0.1
+Starting...
+22:02:28,263 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [/opt/knowesis/sift/orchestrator/conf/so-interactionhandler-logback.xml] at [file:/opt/knowesis/sift/orchestrator/conf/so-interactionhandler-logback.xml]
+22:02:28,556 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+22:02:28,564 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [file]
+22:02:28,629 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@334203599 - Will use zip compression
+22:02:28,630 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@334203599 - Will use the pattern /opt/knowesis/sift/orchestrator/log/archive/so-interactionhandler.log-%d{yyyy-MM-dd}_%i for the active file
+22:02:28,633 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3891771e - The date pattern is 'yyyy-MM-dd' from file name pattern '/opt/knowesis/sift/orchestrator/log/archive/so-interactionhandler.log-%d{yyyy-MM-dd}_%i.zip'.
+22:02:28,633 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3891771e - Roll-over at midnight.
+22:02:28,642 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3891771e - Setting initial period to Wed Jul 12 22:02:28 AEST 2023
+22:02:28,642 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3891771e - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+22:02:28,642 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3891771e - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+22:02:28,644 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.PatternLayout] for [layout] property
+22:02:28,657 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[file] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+22:02:28,657 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[file] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+22:02:28,657 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[file] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+22:02:28,659 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[file] - Active log file name: /opt/knowesis/sift/orchestrator/log/so-interactionhandler.log
+22:02:28,659 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[file] - File property is set to [/opt/knowesis/sift/orchestrator/log/so-interactionhandler.log]
+22:02:28,661 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [com.internetitem.logback.elasticsearch.ElasticsearchAppender]
+22:02:28,663 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [elastic]
+22:02:28,667 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.ElasticsearchProperties] for [properties] property
+22:02:28,668 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+22:02:28,670 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+22:02:28,670 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+22:02:28,671 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.Property] for [property] property
+22:02:28,674 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.HttpRequestHeaders] for [headers] property
+22:02:28,674 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [com.internetitem.logback.elasticsearch.config.HttpRequestHeader] for [header] property
+22:02:28,741 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+22:02:28,741 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [perf]
+22:02:28,743 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1634132079 - Will use zip compression
+22:02:28,743 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1634132079 - Will use the pattern /opt/knowesis/sift/orchestrator/log/archive/so-interactionhandler-performance.log-%d{yyyy-MM-dd}_%i for the active file
+22:02:28,744 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@49e202ad - The date pattern is 'yyyy-MM-dd' from file name pattern '/opt/knowesis/sift/orchestrator/log/archive/so-interactionhandler-performance.log-%d{yyyy-MM-dd}_%i.zip'.
+22:02:28,744 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@49e202ad - Roll-over at midnight.
+22:02:28,745 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@49e202ad - Setting initial period to Wed Jul 12 22:02:28 AEST 2023
+22:02:28,745 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@49e202ad - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+22:02:28,745 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@49e202ad - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+22:02:28,745 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.PatternLayout] for [layout] property
+22:02:28,746 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[perf] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+22:02:28,746 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[perf] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+22:02:28,746 |-WARN in ch.qos.logback.core.rolling.RollingFileAppender[perf] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+22:02:28,746 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[perf] - Active log file name: /opt/knowesis/sift/orchestrator/log/so-interactionhandler-performance.log
+22:02:28,746 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[perf] - File property is set to [/opt/knowesis/sift/orchestrator/log/so-interactionhandler-performance.log]
+22:02:28,747 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+22:02:28,748 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [stdout]
+22:02:28,748 |-INFO in ch.qos.logback.core.joran.action.NestedComplexPropertyIA - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+22:02:28,750 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache] to INFO
+22:02:28,751 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [org.apache] to false
+22:02:28,752 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@100:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+22:02:28,752 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[org.apache]
+22:02:28,754 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.knowesis.sift.orchestrator.processor.PerformanceStaticsProcessor] to INFO
+22:02:28,754 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.knowesis.sift.orchestrator.processor.PerformanceStaticsProcessor] to false
+22:02:28,754 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@105:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+22:02:28,754 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [perf] to Logger[com.knowesis.sift.orchestrator.processor.PerformanceStaticsProcessor]
+22:02:28,754 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.apache.camel.component.metrics.MetricsComponent] to INFO
+22:02:28,754 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [org.apache.camel.component.metrics.MetricsComponent] to false
+22:02:28,754 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@110:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+22:02:28,754 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [perf] to Logger[org.apache.camel.component.metrics.MetricsComponent]
+22:02:28,754 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.knowesis] to INFO
+22:02:28,755 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.knowesis] to false
+22:02:28,755 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@115:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][logger][immediateFlush]]
+22:02:28,755 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[com.knowesis]
+22:02:28,755 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+22:02:28,755 |-ERROR in ch.qos.logback.core.joran.spi.Interpreter@120:25 - no applicable action for [immediateFlush], current ElementPath  is [[configuration][root][immediateFlush]]
+22:02:28,755 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [stdout] to Logger[ROOT]
+22:02:28,755 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+22:02:28,756 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@7bc1a03d - Registering current configuration as safe fallback point
+[07/12/23 22:02:28:829] [main] ClassPathXmlApplic I Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@534df152: startup date [Wed Jul 12 22:02:28 AEST 2023]; root of context hierarchy 
+[07/12/23 22:02:28:878] [main] XmlBeanDefinitionR I Loading XML bean definitions from class path resource [META-INF/spring/camel-context.xml] 
+[07/12/23 22:02:29:650] [main] XmlBeanDefinitionR I Loading XML bean definitions from URL [file:/opt/knowesis/sift/orchestrator/conf/so-interactionhandler-routes.xml] 
+[07/12/23 22:02:32:846] [main] DefaultTypeConvert I Type converters loaded (core: 195, classpath: 11) 
+[07/12/23 22:02:32:965] [main] SpringCamelContext I Apache Camel 2.22.1 (CamelContext: camel-1) is starting 
+[07/12/23 22:02:32:966] [main] SpringCamelContext I StreamCaching is enabled on CamelContext: camel-1 
+[07/12/23 22:02:32:966] [main] SpringCamelContext I MDC logging is enabled on CamelContext: camel-1 
+[07/12/23 22:02:32:966] [main] ManagedManagementS I JMX is enabled 
+[07/12/23 22:02:34:633] [main] HttpComponent      I Created ClientConnectionManager org.apache.http.impl.conn.PoolingHttpClientConnectionManager@4d96250 
+[07/12/23 22:02:34:732] [main] HttpComponent      I Created ClientConnectionManager org.apache.http.impl.conn.PoolingHttpClientConnectionManager@63716833 
+[07/12/23 22:02:34:764] [main] DefaultStreamCachi I StreamCaching in use with spool directory: /tmp/camel/camel-tmp-18086dde-2208-4022-877f-e3c4549a2d04 and rules: [Spool > 128K body size] 
+[07/12/23 22:02:35:072] [main] SedaEndpoint       I Endpoint seda://sendInteractionRequest?blockWhenFull=true&size=100&waitForTaskToComplete=Never is using shared queue: seda://sendInteractionRequest with size: 100 
+[07/12/23 22:02:35:156] [main] SedaEndpoint       I Endpoint seda://sendInteractionRequest?concurrentConsumers=10&size=100 is using shared queue: seda://sendInteractionRequest with size: 100 
+[07/12/23 22:02:35:233] [main] SedaEndpoint       I Endpoint seda://contactPolicyRoute?blockWhenFull=true&size=100&waitForTaskToComplete=Never is using shared queue: seda://contactPolicyRoute with size: 100 
+[07/12/23 22:02:35:235] [main] SedaEndpoint       I Endpoint seda://dbRoute?waitForTaskToComplete=Never is using shared queue: seda://dbRoute with size: 1000 
+[07/12/23 22:02:35:349] [main] SedaEndpoint       I Endpoint seda://contactPolicyRoute?concurrentConsumers=10&size=100 is using shared queue: seda://contactPolicyRoute with size: 100 
+[07/12/23 22:02:35:433] [main] SedaEndpoint       I Endpoint seda://dbRoute is using shared queue: seda://dbRoute with size: 1000 
+[07/12/23 22:02:35:551] [main] ProducerConfig     I ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092, b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+ 
+[07/12/23 22:02:35:641] [main] KafkaProducer      W [Producer clientId=producer-1] DefaultPartitioner is deprecated.  Please clear partitioner.class configuration setting to get the default partitioning behavior 
+[07/12/23 22:02:35:643] [main] KafkaProducer      W [Producer clientId=producer-1] delivery.timeout.ms should be equal to or larger than linger.ms + request.timeout.ms. Setting it to 305000. 
+[07/12/23 22:02:35:759] [main] ProducerConfig     W These configurations '[sasl.kerberos.ticket.renew.window.factor, sasl.kerberos.kinit.cmd, sasl.kerberos.ticket.renew.jitter, ssl.trustmanager.algorithm, ssl.keystore.type, sasl.kerberos.min.time.before.relogin, ssl.protocol, ssl.enabled.protocols, ssl.truststore.type, ssl.keymanager.algorithm]' were supplied but are not used yet. 
+[07/12/23 22:02:35:761] [main] AppInfoParser      I Kafka version: 3.3.2 
+[07/12/23 22:02:35:761] [main] AppInfoParser      I Kafka commitId: b66af662e61082cb 
+[07/12/23 22:02:35:761] [main] AppInfoParser      I Kafka startTimeMs: 1689163355760 
+[07/12/23 22:02:35:832] [main] SpringCamelContext I Route: getAuthTokenRoute started and consuming from: direct://getAUTHToken 
+[07/12/23 22:02:35:834] [main] SpringCamelContext I Route: initializeAuthTokenRouteFirst started and consuming from: timer://initializeToken?repeatCount=1 
+[07/12/23 22:02:35:836] [main] KafkaConsumer      I Starting Kafka consumer on topic: so.interaction.BOOST.bu with breakOnFirstError: false 
+[07/12/23 22:02:35:853] [main] ConsumerConfig     I ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092, b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-intraction-BOOST_BU-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = intraction-BOOST_BU
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 60000
+	max.poll.records = 20
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 40000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+ 
+[07/12/23 22:02:36:168] [main] ConsumerConfig     W These configurations '[sasl.kerberos.ticket.renew.window.factor, sasl.kerberos.kinit.cmd, sasl.kerberos.ticket.renew.jitter, ssl.trustmanager.algorithm, ssl.keystore.type, sasl.kerberos.min.time.before.relogin, ssl.protocol, ssl.enabled.protocols, ssl.truststore.type, ssl.keymanager.algorithm]' were supplied but are not used yet. 
+[07/12/23 22:02:36:168] [main] AppInfoParser      I Kafka version: 3.3.2 
+[07/12/23 22:02:36:168] [main] AppInfoParser      I Kafka commitId: b66af662e61082cb 
+[07/12/23 22:02:36:168] [main] AppInfoParser      I Kafka startTimeMs: 1689163356168 
+[07/12/23 22:02:36:171] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] KafkaConsumer      I Subscribing so.interaction.BOOST.bu-Thread 0 to topic so.interaction.BOOST.bu 
+[07/12/23 22:02:36:170] [main] SpringCamelContext I Route: inputRoute started and consuming from: kafka://so.interaction.BOOST.bu?autoOffsetReset=latest&brokers=b-2.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com%3A9092%2Cb-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com%3A9092&groupId=intraction-BOOST_BU&maxPollIntervalMs=60000&maxPollRecords=20 
+[07/12/23 22:02:36:172] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] KafkaConsumer      I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Subscribed to topic(s): so.interaction.BOOST.bu 
+[07/12/23 22:02:36:236] [main] SpringCamelContext I Route: interactionAPIRoute started and consuming from: seda://sendInteractionRequest?concurrentConsumers=10&size=100 
+[07/12/23 22:02:36:246] [main] SpringCamelContext I Route: contactPolicyRoute started and consuming from: seda://contactPolicyRoute?concurrentConsumers=10&size=100 
+[07/12/23 22:02:36:249] [main] SpringCamelContext I Route: dbLoggingRoute started and consuming from: seda://dbRoute 
+[07/12/23 22:02:36:252] [main] SpringCamelContext I Total 6 routes, of which 6 are started 
+[07/12/23 22:02:36:253] [main] SpringCamelContext I Apache Camel 2.22.1 (CamelContext: camel-1) started in 3.288 seconds 
+[07/12/23 22:02:36:262] [main] DefaultLifecyclePr I Starting beans in phase 2147483646 
+[07/12/23 22:02:36:973] [kafka-producer-network-thread | producer-1] Metadata           I [Producer clientId=producer-1] Cluster ID: UAP21MjlQTSkIoYkpuKEBg 
+[07/12/23 22:02:37:028] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] Metadata           I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Resetting the last seen epoch of partition so.interaction.BOOST.bu-0 to 3 since the associated topicId changed from null to 8kkJ9h4fSkOcR7LT8tooGA 
+[07/12/23 22:02:37:033] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] Metadata           I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Cluster ID: UAP21MjlQTSkIoYkpuKEBg 
+[07/12/23 22:02:37:034] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Discovered group coordinator b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092 (id: 2147483646 rack: null) 
+[07/12/23 22:02:37:042] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] (Re-)joining group 
+[07/12/23 22:02:37:059] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Request joining group due to: need to re-join with the given member-id: consumer-intraction-BOOST_BU-1-ae4e734e-83bc-47cd-88d6-365b3c59e9c0 
+[07/12/23 22:02:37:059] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) 
+[07/12/23 22:02:37:059] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] (Re-)joining group 
+[07/12/23 22:02:37:261] [Camel (camel-1) thread #24 - timer://initializeToken] initializeAuthToke I Initializing authentication token 
+[07/12/23 22:02:37:296] [Camel (camel-1) thread #24 - timer://initializeToken] getAuthTokenRoute  I Invoking AUTH service 
+[07/12/23 22:02:38:969] [Camel (camel-1) thread #24 - timer://initializeToken] getAuthTokenRoute  I Token received from AUTH API 
+[07/12/23 22:02:38:970] [Camel (camel-1) thread #24 - timer://initializeToken] getAuthTokenRoute  I Authentication token updated 
+[07/12/23 22:02:39:993] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Successfully joined group with generation Generation{generationId=22, memberId='consumer-intraction-BOOST_BU-1-ae4e734e-83bc-47cd-88d6-365b3c59e9c0', protocol='range'} 
+[07/12/23 22:02:39:997] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Successfully synced group in generation Generation{generationId=22, memberId='consumer-intraction-BOOST_BU-1-ae4e734e-83bc-47cd-88d6-365b3c59e9c0', protocol='range'} 
+[07/12/23 22:02:40:000] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Notifying assignor about the new Assignment(partitions=[]) 
+[07/12/23 22:02:40:000] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Adding newly assigned partitions:  
+[07/12/23 22:03:00:999] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Request joining group due to: group is already rebalancing 
+[07/12/23 22:03:01:001] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Revoke previously assigned partitions  
+[07/12/23 22:03:01:001] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] (Re-)joining group 
+[07/12/23 22:03:01:004] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Successfully joined group with generation Generation{generationId=23, memberId='consumer-intraction-BOOST_BU-1-ae4e734e-83bc-47cd-88d6-365b3c59e9c0', protocol='range'} 
+[07/12/23 22:03:01:006] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Finished assignment for group at generation 23: {consumer-intraction-BOOST_BU-1-ae4e734e-83bc-47cd-88d6-365b3c59e9c0=Assignment(partitions=[so.interaction.BOOST.bu-0])} 
+[07/12/23 22:03:01:010] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Successfully synced group in generation Generation{generationId=23, memberId='consumer-intraction-BOOST_BU-1-ae4e734e-83bc-47cd-88d6-365b3c59e9c0', protocol='range'} 
+[07/12/23 22:03:01:011] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Notifying assignor about the new Assignment(partitions=[so.interaction.BOOST.bu-0]) 
+[07/12/23 22:03:01:014] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Adding newly assigned partitions: so.interaction.BOOST.bu-0 
+[07/12/23 22:03:01:024] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] ConsumerCoordinato I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Setting offset for partition so.interaction.BOOST.bu-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b-1.opoloresilienceno.udesof.c2.kafka.ap-southeast-2.amazonaws.com:9092 (id: 1 rack: apse2-az3)], epoch=3}} 
+[07/12/23 22:11:37:064] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] NetworkClient      I [Consumer clientId=consumer-intraction-BOOST_BU-1, groupId=intraction-BOOST_BU] Node -2 disconnected. 
+[07/12/23 22:12:36:994] [kafka-producer-network-thread | producer-1] NetworkClient      I [Producer clientId=producer-1] Node -2 disconnected. 
+[07/13/23 21:20:09:056] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] inputRoute         I Journey Message received: {"msisdn":"0475079307","shortCode":null,"offerStartDate":null,"offerEndDate":null,"isOptin":false,"optInChannel":null,"optInShortCode":null,"optInKeyword":null,"channel":"SMS","notificationMsg":"","offerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","programId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","subscriberId":"-99","triggerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","eventId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","flowId":"04750793070987654323","isControl":false,"isSimulated":false,"promotionType":"","transactionId":"","contactDirection":"","triggerTimestamp":1692907720832,"actionResponse":"","action":"CORENOTIFICATION","countAsContact":"Y","actionStatus":"SUCCESS","eventPayload":{"MOBILE_NUMBER":"61474940087","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1.0,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19.0,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200.0,"DAYS_TO_CREDIT_EXPIRY":-1.0,"eventDefinitionKey":"Event-3a400f58-dcef-35c7-9632-d4d2faa6a978","LAST_RECHARGE_AMOUNT":30.0,"LAST_RECHARGE_DATE":"2023-04-12 13:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"515007949","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"},"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","sfmcMID":"515007949","sourceSystem":"H","category":"BASIC","offerDescription":"SFMC OFFER","offerType":"Notification","offerScore":3,"fulfilmentProduct":"","parentFlowId":"04750793070987654323","parentJourneyId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","originalDefinitionKey":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false} 
+[07/13/23 21:20:09:128] [Camel (camel-1) thread #10 - seda://sendInteractionRequest] getAuthTokenRoute  I Invoking AUTH service 
+[07/13/23 21:20:10:035] [Camel (camel-1) thread #10 - seda://sendInteractionRequest] getAuthTokenRoute  I Token received from AUTH API 
+[07/13/23 21:20:10:035] [Camel (camel-1) thread #10 - seda://sendInteractionRequest] getAuthTokenRoute  I Authentication token updated 
+[07/13/23 21:20:10:252] [Camel (camel-1) thread #10 - seda://sendInteractionRequest] interactionAPIRout I Invoking journey API service : body -> {"ContactKey":"Payal_1","EventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","EstablishContactKey":true,"Data":{"LOCALE":"en-AU","TEXT_TO_BE_SENT":"","FLOW_ID":"04750793070987654323","EVENT_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","EVENT_TIMESTAMP":"2023-08-24 20:08:40","CATEGORY":"BASIC","OFFER_DESCRIPTION":"SFMC OFFER","OFFER_TYPE":"Notification","OFFER_SCORE":"3","FULFILMENT_PRODUCT":"", "PROGRAM_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","OFFER_END_DATE":null,"OFFER_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","IS_CONTROL": false,"IS_SIMULATED": false,"MOBILE_NUMBER":"61474940087","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200,"DAYS_TO_CREDIT_EXPIRY":-1,"eventDefinitionKey":"Event-3a400f58-dcef-35c7-9632-d4d2faa6a978","LAST_RECHARGE_AMOUNT":30,"LAST_RECHARGE_DATE":"2023-04-11 22:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"515007949","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"}} - headers -> {Authorization=Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJaSjF2MGlheVdhdXgyeGJIaEtGYUl6MksiLCJjbGllbnRfaWQiOiJqM3JoOTNmOTh6OGN4bzE4MDM1MmJ5MHkiLCJlaWQiOjEwMDAxNzQwMSwic3RhY2tfa2V5IjoiUzEwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NTMxfQ.Tju763R7i70eafpHGE_OLn7FhnyG_IkGA3SoHgS1ji4.5opQp0x6ZehUhoJ5kCofGzeFhVyF6VpqqidT7UPbhSfHrVx9Bo7bl1BaWtizZxeBbDq55Fjbz_wv5fwlJnekeQFbsePNohSpqu0MK4-Ct0IQ0oEJIaDO7N1fTSCRtnHYteDXWLY0s8olDzlqzqRtrS65FFT2mldgjMQFb, breadcrumbId=[B@5e88a6b7, cache-control=no-cache, must-revalidate, max-age=0, no-store, private, CamelHttpMethod=POST, CamelHttpResponseCode=200, CamelHttpResponseText=OK, Connection=keep-alive, Content-Length=1094, Content-Security-Policy=upgrade-insecure-requests, Content-Type=application/json, Date=Thu, 13 Jul 2023 11:20:09 GMT, isTokenExpired=true, Keep-Alive=timeout=5, Referrer-Policy=strict-origin-when-cross-origin, RestURL=mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/, strict-transport-security=max-age=15552000; includeSubDomains; preload, x-content-type-options=nosniff, x-frame-options=DENY, x-mashery-message-id=972583d1-7e3b-4c69-89dd-4bd37c931e8c, x-mashery-responder=10-at02, x-xss-protection=1; mode=block} 
+[07/13/23 21:20:10:344] [Camel (camel-1) thread #10 - seda://sendInteractionRequest] HttpComponent      I Created ClientConnectionManager org.apache.http.impl.conn.PoolingHttpClientConnectionManager@4b9cd6f1 
+[07/13/23 21:20:11:154] [Camel (camel-1) thread #10 - seda://sendInteractionRequest] ErrorMessagePrepar E Error message caught by ErrorMessagePrepareProcessor : body -> {"msisdn":"0475079307","shortCode":null,"offerStartDate":null,"offerEndDate":null,"isOptin":false,"optInChannel":null,"optInShortCode":null,"optInKeyword":null,"channel":"SMS","notificationMsg":"","offerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","programId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","subscriberId":"-99","triggerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","eventId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","flowId":"04750793070987654323","isControl":false,"isSimulated":false,"promotionType":"","transactionId":"","contactDirection":"","triggerTimestamp":1692907720832,"actionResponse":"","action":"CORENOTIFICATION","countAsContact":"Y","actionStatus":"SUCCESS","eventPayload":{"MOBILE_NUMBER":"61474940087","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1.0,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19.0,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200.0,"DAYS_TO_CREDIT_EXPIRY":-1.0,"eventDefinitionKey":"Event-3a400f58-dcef-35c7-9632-d4d2faa6a978","LAST_RECHARGE_AMOUNT":30.0,"LAST_RECHARGE_DATE":"2023-04-12 13:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"515007949","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"},"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","sfmcMID":"515007949","sourceSystem":"H","category":"BASIC","offerDescription":"SFMC OFFER","offerType":"Notification","offerScore":3,"fulfilmentProduct":"","parentFlowId":"04750793070987654323","parentJourneyId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","originalDefinitionKey":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false} : headers -> {Authorization=Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJaSjF2MGlheVdhdXgyeGJIaEtGYUl6MksiLCJjbGllbnRfaWQiOiJqM3JoOTNmOTh6OGN4bzE4MDM1MmJ5MHkiLCJlaWQiOjEwMDAxNzQwMSwic3RhY2tfa2V5IjoiUzEwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NTMxfQ.Tju763R7i70eafpHGE_OLn7FhnyG_IkGA3SoHgS1ji4.5opQp0x6ZehUhoJ5kCofGzeFhVyF6VpqqidT7UPbhSfHrVx9Bo7bl1BaWtizZxeBbDq55Fjbz_wv5fwlJnekeQFbsePNohSpqu0MK4-Ct0IQ0oEJIaDO7N1fTSCRtnHYteDXWLY0s8olDzlqzqRtrS65FFT2mldgjMQFb, breadcrumbId=[B@5e88a6b7, cache-control=no-cache, must-revalidate, max-age=0, no-store, private, CamelHttpMethod=POST, CamelHttpResponseCode=200, CamelHttpResponseText=OK, Connection=keep-alive, Content-Length=1094, Content-Security-Policy=upgrade-insecure-requests, Content-Type=application/json, Date=Thu, 13 Jul 2023 11:20:09 GMT, isTokenExpired=true, Keep-Alive=timeout=5, Referrer-Policy=strict-origin-when-cross-origin, RestURL=mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/, strict-transport-security=max-age=15552000; includeSubDomains; preload, x-content-type-options=nosniff, x-frame-options=DENY, x-mashery-message-id=972583d1-7e3b-4c69-89dd-4bd37c931e8c, x-mashery-responder=10-at02, x-xss-protection=1; mode=block} : EXCEPTION_CAUGHT -> HTTP operation failed invoking https://mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/interaction/v1/events with statusCode: 400 
+[07/13/23 21:20:11:154] [Camel (camel-1) thread #10 - seda://sendInteractionRequest] ErrorMessagePrepar E Exception caught : stacktrace -> [Ljava.lang.StackTraceElement;@65aeb7ba 
+[07/13/23 21:22:20:279] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] inputRoute         I Journey Message received: {"msisdn":"0475079307","shortCode":null,"offerStartDate":null,"offerEndDate":null,"isOptin":false,"optInChannel":null,"optInShortCode":null,"optInKeyword":null,"channel":"SMS","notificationMsg":"","offerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","programId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","subscriberId":"-99","triggerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","eventId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","flowId":"04750793070987654324","isControl":false,"isSimulated":false,"promotionType":"","transactionId":"","contactDirection":"","triggerTimestamp":1693907720832,"actionResponse":"","action":"CORENOTIFICATION","countAsContact":"Y","actionStatus":"SUCCESS","eventPayload":{"MOBILE_NUMBER":"61474940087","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1.0,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19.0,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200.0,"DAYS_TO_CREDIT_EXPIRY":-1.0,"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","LAST_RECHARGE_AMOUNT":30.0,"LAST_RECHARGE_DATE":"2023-04-12 13:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"515007949","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"},"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","sfmcMID":"515007949","sourceSystem":"H","category":"BASIC","offerDescription":"SFMC OFFER","offerType":"Notification","offerScore":3,"fulfilmentProduct":"","parentFlowId":"04750793070987654324","parentJourneyId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","originalDefinitionKey":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false} 
+[07/13/23 21:22:20:284] [Camel (camel-1) thread #3 - seda://sendInteractionRequest] interactionAPIRout I Invoking journey API service : body -> {"ContactKey":"Payal_1","EventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","EstablishContactKey":true,"Data":{"LOCALE":"en-AU","TEXT_TO_BE_SENT":"","FLOW_ID":"04750793070987654324","EVENT_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","EVENT_TIMESTAMP":"2023-09-05 09:55:20","CATEGORY":"BASIC","OFFER_DESCRIPTION":"SFMC OFFER","OFFER_TYPE":"Notification","OFFER_SCORE":"3","FULFILMENT_PRODUCT":"", "PROGRAM_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","OFFER_END_DATE":null,"OFFER_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","IS_CONTROL": false,"IS_SIMULATED": false,"MOBILE_NUMBER":"61474940087","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200,"DAYS_TO_CREDIT_EXPIRY":-1,"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","LAST_RECHARGE_AMOUNT":30,"LAST_RECHARGE_DATE":"2023-04-11 22:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"515007949","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"}} - headers -> {Authorization=Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJaSjF2MGlheVdhdXgyeGJIaEtGYUl6MksiLCJjbGllbnRfaWQiOiJqM3JoOTNmOTh6OGN4bzE4MDM1MmJ5MHkiLCJlaWQiOjEwMDAxNzQwMSwic3RhY2tfa2V5IjoiUzEwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NTMxfQ.Tju763R7i70eafpHGE_OLn7FhnyG_IkGA3SoHgS1ji4.5opQp0x6ZehUhoJ5kCofGzeFhVyF6VpqqidT7UPbhSfHrVx9Bo7bl1BaWtizZxeBbDq55Fjbz_wv5fwlJnekeQFbsePNohSpqu0MK4-Ct0IQ0oEJIaDO7N1fTSCRtnHYteDXWLY0s8olDzlqzqRtrS65FFT2mldgjMQFb, breadcrumbId=[B@14f18051, CamelHttpMethod=POST, Content-Type=application/json, isTokenExpired=false, RestURL=mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/} 
+[07/13/23 21:22:21:055] [Camel (camel-1) thread #3 - seda://sendInteractionRequest] ErrorMessagePrepar E Error message caught by ErrorMessagePrepareProcessor : body -> {"msisdn":"0475079307","shortCode":null,"offerStartDate":null,"offerEndDate":null,"isOptin":false,"optInChannel":null,"optInShortCode":null,"optInKeyword":null,"channel":"SMS","notificationMsg":"","offerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","programId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","subscriberId":"-99","triggerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","eventId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","flowId":"04750793070987654324","isControl":false,"isSimulated":false,"promotionType":"","transactionId":"","contactDirection":"","triggerTimestamp":1693907720832,"actionResponse":"","action":"CORENOTIFICATION","countAsContact":"Y","actionStatus":"SUCCESS","eventPayload":{"MOBILE_NUMBER":"61474940087","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1.0,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19.0,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200.0,"DAYS_TO_CREDIT_EXPIRY":-1.0,"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","LAST_RECHARGE_AMOUNT":30.0,"LAST_RECHARGE_DATE":"2023-04-12 13:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"515007949","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"},"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","sfmcMID":"515007949","sourceSystem":"H","category":"BASIC","offerDescription":"SFMC OFFER","offerType":"Notification","offerScore":3,"fulfilmentProduct":"","parentFlowId":"04750793070987654324","parentJourneyId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","originalDefinitionKey":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false} : headers -> {Authorization=Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJaSjF2MGlheVdhdXgyeGJIaEtGYUl6MksiLCJjbGllbnRfaWQiOiJqM3JoOTNmOTh6OGN4bzE4MDM1MmJ5MHkiLCJlaWQiOjEwMDAxNzQwMSwic3RhY2tfa2V5IjoiUzEwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NTMxfQ.Tju763R7i70eafpHGE_OLn7FhnyG_IkGA3SoHgS1ji4.5opQp0x6ZehUhoJ5kCofGzeFhVyF6VpqqidT7UPbhSfHrVx9Bo7bl1BaWtizZxeBbDq55Fjbz_wv5fwlJnekeQFbsePNohSpqu0MK4-Ct0IQ0oEJIaDO7N1fTSCRtnHYteDXWLY0s8olDzlqzqRtrS65FFT2mldgjMQFb, breadcrumbId=[B@14f18051, CamelHttpMethod=POST, Content-Type=application/json, isTokenExpired=false, RestURL=mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/} : EXCEPTION_CAUGHT -> HTTP operation failed invoking https://mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/interaction/v1/events with statusCode: 400 
+[07/13/23 21:22:21:056] [Camel (camel-1) thread #3 - seda://sendInteractionRequest] ErrorMessagePrepar E Exception caught : stacktrace -> [Ljava.lang.StackTraceElement;@7c36ad65 
+[07/14/23 17:21:06:385] [Camel (camel-1) thread #2 - KafkaConsumer[so.interaction.BOOST.bu]] inputRoute         I Journey Message received: {"msisdn":"0475079307","shortCode":null,"offerStartDate":null,"offerEndDate":null,"isOptin":false,"optInChannel":null,"optInShortCode":null,"optInKeyword":null,"channel":"SMS","notificationMsg":"","offerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","programId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","subscriberId":"-99","triggerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","eventId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","flowId":"04750793070987654327","isControl":false,"isSimulated":false,"promotionType":"","transactionId":"","contactDirection":"","triggerTimestamp":1694907740932,"actionResponse":"","action":"CORENOTIFICATION","countAsContact":"Y","actionStatus":"SUCCESS","eventPayload":{"MOBILE_NUMBER":"61475079307","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1.0,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19.0,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200.0,"DAYS_TO_CREDIT_EXPIRY":-1.0,"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","LAST_RECHARGE_AMOUNT":30.0,"LAST_RECHARGE_DATE":"2023-04-12 13:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"100017401","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"},"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","sfmcMID":"100017401","sourceSystem":"H","category":"BASIC","offerDescription":"SFMC OFFER","offerType":"Notification","offerScore":3,"fulfilmentProduct":"","parentFlowId":"04750793070987654325","parentJourneyId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","originalDefinitionKey":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false} 
+[07/14/23 17:21:06:390] [Camel (camel-1) thread #4 - seda://sendInteractionRequest] getAuthTokenRoute  I Invoking AUTH service 
+[07/14/23 17:21:07:325] [Camel (camel-1) thread #4 - seda://sendInteractionRequest] getAuthTokenRoute  I Token received from AUTH API 
+[07/14/23 17:21:07:325] [Camel (camel-1) thread #4 - seda://sendInteractionRequest] getAuthTokenRoute  I Authentication token updated 
+[07/14/23 17:21:07:333] [Camel (camel-1) thread #4 - seda://sendInteractionRequest] interactionAPIRout I Invoking journey API service : body -> {"ContactKey":"Payal_1","EventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","EstablishContactKey":true,"Data":{"LOCALE":"en-AU","TEXT_TO_BE_SENT":"","FLOW_ID":"04750793070987654327","EVENT_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","EVENT_TIMESTAMP":"2023-09-16 23:42:20","CATEGORY":"BASIC","OFFER_DESCRIPTION":"SFMC OFFER","OFFER_TYPE":"Notification","OFFER_SCORE":"3","FULFILMENT_PRODUCT":"", "PROGRAM_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","OFFER_END_DATE":null,"OFFER_ID":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","IS_CONTROL": false,"IS_SIMULATED": false,"MOBILE_NUMBER":"61475079307","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200,"DAYS_TO_CREDIT_EXPIRY":-1,"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","LAST_RECHARGE_AMOUNT":30,"LAST_RECHARGE_DATE":"2023-04-11 22:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"100017401","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"}} - headers -> {Authorization=Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJabHlvSmpTaGpxUnVZVzFySEVsS1QzWkoiLCJjbGllbnRfaWQiOiJqM3JoOTNmOTh6OGN4bzE4MDM1MmJ5MHkiLCJlaWQiOjEwMDAxNzQwMSwic3RhY2tfa2V5IjoiUzEwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NTMyfQ.WrHOpjFdq7R2kCoyZ94GAWGDFUVRmy24cr7smibR450.sFnv-C0i21_TEySFeDvpb6x6mvkfdk56CFx-tT1Psk9BoQSfTCWYOSiBJPWrVLYEHDt4yUwcwjkKdO_QpCYihGHURNY3SiKH4WDQnVJZz7OlepgB1-gCJN_LlNg1x5UCX5-T1hDgzNIY8OfrTCXmsaU7KiqNIKx50R_3b, breadcrumbId=[B@750ba018, cache-control=no-cache, must-revalidate, max-age=0, no-store, private, CamelHttpMethod=POST, CamelHttpResponseCode=200, CamelHttpResponseText=OK, Connection=keep-alive, Content-Length=1094, Content-Security-Policy=upgrade-insecure-requests, Content-Type=application/json, Date=Fri, 14 Jul 2023 07:21:07 GMT, isTokenExpired=true, Keep-Alive=timeout=5, Referrer-Policy=strict-origin-when-cross-origin, RestURL=mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/, strict-transport-security=max-age=15552000; includeSubDomains; preload, x-content-type-options=nosniff, x-frame-options=DENY, x-mashery-message-id=b2789046-ad24-43c1-8226-f3a14afefc65, x-mashery-responder=10-at01, x-xss-protection=1; mode=block} 
+[07/14/23 17:21:08:167] [Camel (camel-1) thread #4 - seda://sendInteractionRequest] ErrorMessagePrepar E Error message caught by ErrorMessagePrepareProcessor : body -> {"msisdn":"0475079307","shortCode":null,"offerStartDate":null,"offerEndDate":null,"isOptin":false,"optInChannel":null,"optInShortCode":null,"optInKeyword":null,"channel":"SMS","notificationMsg":"","offerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_OFFER","programId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_PROGRAM","subscriberId":"-99","triggerId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","eventId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5_0_EVENT","flowId":"04750793070987654327","isControl":false,"isSimulated":false,"promotionType":"","transactionId":"","contactDirection":"","triggerTimestamp":1694907740932,"actionResponse":"","action":"CORENOTIFICATION","countAsContact":"Y","actionStatus":"SUCCESS","eventPayload":{"MOBILE_NUMBER":"61475079307","MONITORED_ACTION":"","REWARD_VALUE":"","REWARD_VALIDITY":"","ACCOUNT_STARTDATE":null,"AccountID":"0012P000005eAdYABC","ACTIVATION_ACCOUNT_PROFILE":"","AGE_ON_NETWORK":-1.0,"AUTORECHARGE_AMOUNT":0,"AUTORECHARGE_ENABLE":"false","BILLING_PRODUCT":"","CAC":"5001001072","CONTACT_ID":"Payal_1","CREDIT_ALL_COUNT":19.0,"CREDIT_BALANCE":0,"DAYS_AFTER_CREDIT_EXPIRY":200.0,"DAYS_TO_CREDIT_EXPIRY":-1.0,"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","LAST_RECHARGE_AMOUNT":30.0,"LAST_RECHARGE_DATE":"2023-04-12 13:16:56","LATEST_CREDIT_METHOD":"Bonus","SERVICE_NUM":"0474940087","sfmcMID":"100017401","SIEBEL_BAN":"111122224443","STATUS_OF_SUBSCRIBER":"","SUBSCRIBER_ID":"-99","SUBSCRIBER_SERVICE":"","TYPE_OF_ACCOUNT":"PREPAID"},"eventDefinitionKey":"Event-0658b9b2-a85b-46c2-4d2b-6f73e8eea366","sfmcMID":"100017401","sourceSystem":"H","category":"BASIC","offerDescription":"SFMC OFFER","offerType":"Notification","offerScore":3,"fulfilmentProduct":"","parentFlowId":"04750793070987654325","parentJourneyId":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","originalDefinitionKey":"daaa7c50-3953-497f-ac57-d7b1a4dc06b5","referenceId":"","commsId":"","activityInstanceId":"","commsChannel":"","activityVersionId":"","isSilent":false} : headers -> {Authorization=Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjQiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJabHlvSmpTaGpxUnVZVzFySEVsS1QzWkoiLCJjbGllbnRfaWQiOiJqM3JoOTNmOTh6OGN4bzE4MDM1MmJ5MHkiLCJlaWQiOjEwMDAxNzQwMSwic3RhY2tfa2V5IjoiUzEwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciIsInBpZCI6NTMyfQ.WrHOpjFdq7R2kCoyZ94GAWGDFUVRmy24cr7smibR450.sFnv-C0i21_TEySFeDvpb6x6mvkfdk56CFx-tT1Psk9BoQSfTCWYOSiBJPWrVLYEHDt4yUwcwjkKdO_QpCYihGHURNY3SiKH4WDQnVJZz7OlepgB1-gCJN_LlNg1x5UCX5-T1hDgzNIY8OfrTCXmsaU7KiqNIKx50R_3b, breadcrumbId=[B@750ba018, cache-control=no-cache, must-revalidate, max-age=0, no-store, private, CamelHttpMethod=POST, CamelHttpResponseCode=200, CamelHttpResponseText=OK, Connection=keep-alive, Content-Length=1094, Content-Security-Policy=upgrade-insecure-requests, Content-Type=application/json, Date=Fri, 14 Jul 2023 07:21:07 GMT, isTokenExpired=true, Keep-Alive=timeout=5, Referrer-Policy=strict-origin-when-cross-origin, RestURL=mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/, strict-transport-security=max-age=15552000; includeSubDomains; preload, x-content-type-options=nosniff, x-frame-options=DENY, x-mashery-message-id=b2789046-ad24-43c1-8226-f3a14afefc65, x-mashery-responder=10-at01, x-xss-protection=1; mode=block} : EXCEPTION_CAUGHT -> HTTP operation failed invoking https://mctynssjb0xtj8-l2h6gt537642m.rest.marketingcloudapis.com/interaction/v1/events with statusCode: 400 
+[07/14/23 17:21:08:168] [Camel (camel-1) thread #4 - seda://sendInteractionRequest] ErrorMessagePrepar E Exception caught : stacktrace -> [Ljava.lang.StackTraceElement;@7cf4756d 
