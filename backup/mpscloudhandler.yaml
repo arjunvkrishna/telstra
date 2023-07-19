@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-mpscloudhandler
+spec:
+  selector:
+    matchLabels:
+      app: opolo-mpscloudhandler-pod
+  replicas: 1
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-mpscloudhandler-pod
+        ResourceGroup: so
+    spec:
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: "true"
+      containers:
+      - name: opolo-mpscloudhandler
+        image: knowesis/sift-so:so-mps-cloud-handler-4.0-TELSTRA
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100M
+          limits:
+            cpu: 1
+            memory: 500M
+        imagePullPolicy: Always
+        envFrom:
+          - configMapRef:
+              name: so-opolo-mpscloudhandler-cm
+        volumeMounts:
+        - mountPath: /opt/knowesis/sift/certs/lxapp9607-sever-cert.jks
+          subPath: lxapp9607-sever-cert.jks
+          name: cert-volume
+        - mountPath: /opt/knowesis/sift/certs/siftsocacerts-prd
+          subPath: siftsocacerts-prd
+          name: socacerts-volume
+      volumes:
+      - name: cert-volume
+        configMap:
+          name: cert-server-jks
+      - name: socacerts-volume
+        configMap:
+          name: soca-certs

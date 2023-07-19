@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-mpsdiscounthandler
+  labels:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-mpsdiscounthandler-pod
+  template:
+    metadata:
+      annotations:
+       iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-mpsdiscounthandler-pod
+        ResourceGroup: so
+    spec:
+      imagePullSecrets:
+      - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: "true"
+      containers:
+      - name: opolo-mpsdiscounthandler
+        image: knowesis/sift-so:so-mps-discount-handler-4.0-TELSTRA
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100M
+          limits:
+            cpu: 1
+            memory: 500M
+        imagePullPolicy: Always
+        envFrom:
+          - configMapRef:
+              name: so-opolo-mpsdiscounthandler-cm
+        volumeMounts:
+        - mountPath: /opt/knowesis/sift/certs/lxapp9607-sever-cert.jks
+          subPath: lxapp9607-sever-cert.jks
+          name: cert-volume
+        - mountPath: /opt/knowesis/sift/certs/siftsocacerts-prd
+          subPath: siftsocacerts-prd
+          name: socacerts-volume
+      volumes:
+      - name: cert-volume
+        configMap:
+          name: cert-server-jks
+      - name: socacerts-volume
+        configMap:
+          name: soca-certs

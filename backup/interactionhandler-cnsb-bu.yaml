@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-interactionhandler-cnsb-bu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opolo-interactionhandler-cnsb-bu-pod
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-interactionhandler-cnsb-bu-pod
+        ResourceGroup: so
+    spec:
+      imagePullSecrets:
+        - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: "true"
+      containers:
+        - name: opolo-interactionhandler-cnsb-bu
+          image: knowesis/sift-so:so-interactionhandler-opolo.4.0-TELSTRA
+          resources:
+            requests:
+                cpu: 100m
+                memory: 100M
+            limits:
+                cpu: 1
+                memory: 500M
+          imagePullPolicy: Always
+          envFrom:
+          - configMapRef:
+              name: so-opolo-interactionhandler-cnsb-bu-cm

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opolo-siftsfmcde
+spec:
+  selector:
+    matchLabels:
+      app: opolo-siftsfmcde-pod
+  replicas: 1
+  template:
+    metadata:
+      annotations:
+        iam.amazonaws.com/role: arn:aws:iam::641793388528:role/OpoloResilienceEC2InstanceRole
+      labels:
+        app: opolo-siftsfmcde-pod
+        ResourceGroup: so
+    spec:
+      imagePullSecrets:
+         - name: sift-cred
+      nodeSelector:
+        deploySoOpolo: "true"
+      containers:
+        - name: opolo-siftsfmcde
+          image: knowesis/sift-so:opolo-sfmc-de-handler-4.0-TELSTRA
+          resources:
+             requests:
+                cpu: 100m
+                memory: 100M
+             limits:
+                cpu: 1
+                memory: 500M
+          imagePullPolicy: Always 
+          envFrom:
+          - configMapRef:
+              name: so-opolo-siftsfmcde-cm
